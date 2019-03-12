@@ -1,0 +1,2 @@
+# Don't forget to rename this file to "token"!
+export TOKEN="YOUR_TOKEN_HERE"
