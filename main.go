@@ -32,13 +32,17 @@ func main() {
 
 	b.Handle("/ban", func(m *tb.Message) {
 		replied := m.ReplyTo
-		user, _ := b.ChatMemberOf(m.Chat, replied.OriginalSender)
-		if err != nil {
-			b.Send(m.Chat, "ERRRRR")
-		}
-		err := b.Ban(m.Chat, user)
-		if err != nil {
-			b.Send(m.Chat, "ERRRR")
+		sender, _ := b.ChatMemberOf(m.Chat, m.Sender)
+		if tb.Administrator == sender.Role ||
+			tb.Creator == sender.Role {
+			user, _ := b.ChatMemberOf(m.Chat, replied.Sender)
+			if err != nil {
+				b.Send(m.Chat, "ERRRRR")
+			}
+			err := b.Ban(m.Chat, user)
+			if err != nil {
+				b.Send(m.Chat, "ERRRR")
+			}
 		}
 	})
 	b.Start()
