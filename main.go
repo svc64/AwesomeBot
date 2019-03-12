@@ -19,31 +19,6 @@ func main() {
 	b.Handle("/hello", func(m *tb.Message) {
 		b.Send(m.Sender, "HI THERE")
 	})
-	b.Handle("/banme", func(m *tb.Message) {
-		user, _ := b.ChatMemberOf(m.Chat, m.Sender)
-		if err != nil {
-			b.Send(m.Chat, "ERRRRR")
-		}
-		err := b.Ban(m.Chat, user)
-		if err != nil {
-			b.Send(m.Chat, "ERRRR")
-		}
-	})
-
-	b.Handle("/ban", func(m *tb.Message) {
-		replied := m.ReplyTo
-		sender, _ := b.ChatMemberOf(m.Chat, m.Sender)
-		if tb.Administrator == sender.Role ||
-			tb.Creator == sender.Role {
-			user, _ := b.ChatMemberOf(m.Chat, replied.Sender)
-			if err != nil {
-				b.Send(m.Chat, "ERRRRR")
-			}
-			err := b.Ban(m.Chat, user)
-			if err != nil {
-				b.Send(m.Chat, "ERRRR")
-			}
-		}
-	})
+	handleAdmin(token)
 	b.Start()
 }
