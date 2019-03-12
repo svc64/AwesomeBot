@@ -27,5 +27,5 @@ func main() {
 		defer wg.Done()
 		b.Start()
 	}()
-	wg.Wait()
+	wg.Wait() // Makes the whole thing wait until b.Start finishes (it should always run).
 }
