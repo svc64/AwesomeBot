@@ -43,4 +43,5 @@ func handleAdmin(token string) {
 		defer wg.Done()
 		b.Start()
 	}()
+	// We don't need a wg.Wait() here - the program only exits at the end of main()
 }

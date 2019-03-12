@@ -3,6 +3,7 @@ import (
 	"fmt"
 	tb "gopkg.in/tucnak/telebot.v2"
 	"os"
+	"sync"
 	"time"
 )
 var token string // should be provided at build time
@@ -16,9 +17,15 @@ func main() {
 		fmt.Println("ERRRRRR")
 		os.Exit(21)
 	}
-	handleAdmin(token)
 	b.Handle("/hello", func(m *tb.Message) {
 		b.Send(m.Sender, "HI THERE")
 	})
-	b.Start()
+	handleAdmin(token)
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		b.Start()
+	}()
+	wg.Wait()
 }
