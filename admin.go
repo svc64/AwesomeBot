@@ -2,6 +2,7 @@ package main
 
 import (
 	tb "gopkg.in/tucnak/telebot.v2"
+	"sync"
 	"time"
 )
 func handleAdmin(token string) {
@@ -36,4 +37,10 @@ func handleAdmin(token string) {
 			}
 		}
 	})
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		b.Start()
+	}()
 }

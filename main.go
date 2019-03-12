@@ -16,9 +16,9 @@ func main() {
 		fmt.Println("ERRRRRR")
 		os.Exit(21)
 	}
+	handleAdmin(token)
 	b.Handle("/hello", func(m *tb.Message) {
 		b.Send(m.Sender, "HI THERE")
 	})
-	handleAdmin(token)
 	b.Start()
 }
