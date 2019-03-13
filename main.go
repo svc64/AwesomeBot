@@ -29,7 +29,7 @@ func main() {
 			b.Send(m.Chat, "ERRRR")
 		}
 	})
-
+	// handle bans
 	b.Handle("/ban", func(m *tb.Message) {
 		replied := m.ReplyTo
 		sender, _ := b.ChatMemberOf(m.Chat, m.Sender)
