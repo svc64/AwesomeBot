@@ -3,7 +3,6 @@ import (
 	"fmt"
 	tb "gopkg.in/tucnak/telebot.v2"
 	"os"
-	"sync"
 	"time"
 )
 var token string // should be provided at build time
