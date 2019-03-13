@@ -20,12 +20,31 @@ func main() {
 	b.Handle("/hello", func(m *tb.Message) {
 		b.Send(m.Sender, "HI THERE")
 	})
-	handleAdmin(token)
-	var wg sync.WaitGroup
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-		b.Start()
-	}()
-	wg.Wait() // Makes the whole thing wait until b.Start finishes (it should always run).
+	b.Handle("/banme", func(m *tb.Message) {
+		user, _ := b.ChatMemberOf(m.Chat, m.Sender)
+		if err != nil {
+			b.Send(m.Chat, "ERRRRR")
+		}
+		err := b.Ban(m.Chat, user)
+		if err != nil {
+			b.Send(m.Chat, "ERRRR")
+		}
+	})
+
+	b.Handle("/ban", func(m *tb.Message) {
+		replied := m.ReplyTo
+		sender, _ := b.ChatMemberOf(m.Chat, m.Sender)
+		if tb.Administrator == sender.Role ||
+			tb.Creator == sender.Role {
+			user, _ := b.ChatMemberOf(m.Chat, replied.Sender)
+			if err != nil {
+				b.Send(m.Chat, "ERRRRR")
+			}
+			err := b.Ban(m.Chat, user)
+			if err != nil {
+				b.Send(m.Chat, "ERRRR")
+			}
+		}
+	})
+	b.Start()
 }
