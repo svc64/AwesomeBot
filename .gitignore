@@ -1,5 +1,13 @@
+# KDE Dolphin
 .directory
+# KDE Kate
+*.kate-swp
+# IDEA
 .idea
-awesomeBot
+# The binary
 out
+# The token
 token
+# Dep stuff
+vendor
+Gopkg.lock

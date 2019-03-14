@@ -1,0 +1,11 @@
+[[constraint]]
+  name = "github.com/getsentry/raven-go"
+  version = "0.2.0"
+
+[[constraint]]
+  branch = "v2"
+  name = "gopkg.in/tucnak/telebot.v2"
+
+[prune]
+  go-tests = true
+  unused-packages = true

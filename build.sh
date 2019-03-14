@@ -2,6 +2,6 @@
 NAME=awesomeBot
 source token
 mkdir -p out
-go get ./...
+dep ensure -update
 BUILDCONFIG="-X main.token=$TOKEN"
 go build -ldflags "${BUILDCONFIG}" -v -a -o out/${NAME}
