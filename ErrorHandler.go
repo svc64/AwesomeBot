@@ -21,8 +21,8 @@ func sendEvent(err error, m tb.Message) {
 	if sentryError != nil {
 		fmt.Println("Couldn't set a sentry DSN")
 	}
-	chatUsername := "Chat username: " + m.Chat.Username +"\n"
-	chatTitle := "Chat title: " + m.Chat.Title +"\n"
+	chatUsername := "Chat username: " + m.Chat.Username + "\n"
+	chatTitle := "Chat title: " + m.Chat.Title + "\n"
 	err = errors.New(chatUsername + chatTitle + err.Error())
 	raven.CaptureErrorAndWait(err, nil)
 }
