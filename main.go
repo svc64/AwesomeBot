@@ -17,32 +17,40 @@ func main() {
 		os.Exit(21)
 	}
 	b.Handle("/hello", func(m *tb.Message) {
-		b.Send(m.Sender, "HI THERE")
+		_, err := b.Send(m.Chat, "HI THERE")
+		handleError(err, *m)
 	})
 	b.Handle("/banme", func(m *tb.Message) {
 		user, _ := b.ChatMemberOf(m.Chat, m.Sender)
 		if err != nil {
-			b.Send(m.Chat, "ERRRRR")
+			_, err := b.Send(m.Chat, "ERRRRR")
+			handleError(err, *m)
 		}
 		err := b.Ban(m.Chat, user)
 		if err != nil {
-			b.Send(m.Chat, "ERRRR")
+			_, err := b.Send(m.Chat, "ERRRR")
+			handleError(err, *m)
 		}
 	})
 	// handle bans
 	b.Handle("/ban", func(m *tb.Message) {
 		replied := m.ReplyTo
 		sender, _ := b.ChatMemberOf(m.Chat, m.Sender)
-		if tb.Administrator == sender.Role ||
+		if tb.Administrator == sender.Role || // check if the sender is an admin or the group creator.
 			tb.Creator == sender.Role {
 			user, _ := b.ChatMemberOf(m.Chat, replied.Sender)
 			if err != nil {
-				b.Send(m.Chat, "ERRRRR")
+				_, err := b.Send(m.Chat, "ERRRRR")
+				handleError(err, *m)
 			}
 			err := b.Ban(m.Chat, user)
 			if err != nil {
-				b.Send(m.Chat, "ERRRR")
+				_, err := b.Send(m.Chat, "ERRRR")
+				handleError(err, *m)
 			}
+		} else { // runs when the sender isn't an admin
+			_, err := b.Reply(m, "You are not an admin!")
+			handleError(err, *m)
 		}
 	})
 	b.Start()
