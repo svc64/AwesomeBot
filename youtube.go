@@ -13,7 +13,8 @@ import(
 )
 
 func downloadVideo(vidname string) {
-	if strings.HasPrefix(vidname, "http") {
+	if strings.HasPrefix(vidname, "http://") ||
+		strings.HasPrefix(vidname, "https://")  {
 		// Filter vidname to get just the video ID
 		s := vidname
 		u, err := url.Parse(s)
