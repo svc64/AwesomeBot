@@ -17,7 +17,7 @@ func main() {
 		os.Exit(21)
 	}
 	b.Handle("/hello", func(m *tb.Message) {
-		_, sendError := b.Send(m.Chat, "HI THERE")
+		_, sendError := b.Send(m.Sender, "HI THERE")
 		handleError(err, sendError, *m)
 	})
 	b.Handle("/banme", func(m *tb.Message) {
