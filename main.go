@@ -53,5 +53,6 @@ func main() {
 			handleError(err, sendError, *m)
 		}
 	})
-	b.Start()
+	downloadVideo("Eminem without me")
+	//b.Start()
 }

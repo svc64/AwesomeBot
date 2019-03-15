@@ -1,0 +1,1788 @@
+execve("out/awesomeBot", ["out/awesomeBot"], 0x7ffdf77db3c0 /* 85 vars */) = 0
+brk(NULL)                               = 0x28b5000
+openat(AT_FDCWD, "/home/asafniv/gtk3-nocsd/libgtk3-nocsd.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\21\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0775, st_size=165632, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbc929e8000
+mmap(NULL, 34000, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbc929df000
+mmap(0x7fbc929e0000, 16384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fbc929e0000
+mmap(0x7fbc929e4000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5000) = 0x7fbc929e4000
+mmap(0x7fbc929e6000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7fbc929e6000
+close(3)                                = 0
+access("/etc/ld.so.preload", R_OK)      = 0
+openat(AT_FDCWD, "/etc/ld.so.preload", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=245877, ...}) = 0
+mmap(NULL, 245877, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fbc929a2000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0pl\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=114200, ...}) = 0
+mmap(NULL, 132256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbc92981000
+mmap(0x7fbc92987000, 61440, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7fbc92987000
+mmap(0x7fbc92996000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x7fbc92996000
+mmap(0x7fbc9299c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7fbc9299c000
+mmap(0x7fbc9299e000, 13472, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fbc9299e000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/haswell/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360<\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1988440, ...}) = 0
+mmap(NULL, 2000896, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbc92798000
+mprotect(0x7fbc927ba000, 1822720, PROT_NONE) = 0
+mmap(0x7fbc927ba000, 1507328, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7fbc927ba000
+mmap(0x7fbc9292a000, 311296, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x192000) = 0x7fbc9292a000
+mmap(0x7fbc92977000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1de000) = 0x7fbc92977000
+mmap(0x7fbc9297d000, 14336, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fbc9297d000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\21\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=18784, ...}) = 0
+mmap(NULL, 20752, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbc92792000
+mmap(0x7fbc92793000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fbc92793000
+mmap(0x7fbc92795000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fbc92795000
+mmap(0x7fbc92796000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fbc92796000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbc92790000
+arch_prctl(ARCH_SET_FS, 0x7fbc92790b80) = 0
+mprotect(0x7fbc92977000, 16384, PROT_READ) = 0
+mprotect(0x7fbc92796000, 4096, PROT_READ) = 0
+mprotect(0x7fbc9299c000, 4096, PROT_READ) = 0
+mprotect(0x7fbc929e6000, 4096, PROT_READ) = 0
+mprotect(0x7fbc92a13000, 4096, PROT_READ) = 0
+munmap(0x7fbc929a2000, 245877)          = 0
+set_tid_address(0x7fbc92790e50)         = 5004
+set_robust_list(0x7fbc92790e60, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7fbc929876b0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7fbc92987750, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(NULL)                               = 0x28b5000
+brk(0x28d6000)                          = 0x28d6000
+sched_getaffinity(0, 8192, [0, 1, 2, 3, 4, 5, 6, 7]) = 8
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbc92750000
+mmap(0xc000000000, 67108864, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xc000000000
+mmap(0xc000000000, 67108864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xc000000000
+mmap(NULL, 33554432, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbc90750000
+mmap(NULL, 2164736, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbc9053f000
+mmap(NULL, 65536, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbc929cf000
+mmap(NULL, 65536, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbc929bf000
+rt_sigprocmask(SIG_SETMASK, NULL, [], 8) = 0
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+sigaltstack({ss_sp=0xc000002000, ss_flags=0, ss_size=32768}, NULL) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+gettid()                                = 5004
+rt_sigaction(SIGHUP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGILL, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGTRAP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTRAP, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGABRT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGABRT, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGFPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGFPE, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGUSR1, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR1, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGUSR2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR2, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGPIPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPIPE, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGALRM, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGSTKFLT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSTKFLT, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGCHLD, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGURG, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGURG, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGXCPU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXCPU, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGXFSZ, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXFSZ, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGVTALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGVTALRM, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGPROF, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPROF, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGWINCH, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGWINCH, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGIO, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGIO, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGPWR, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPWR, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGSYS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSYS, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRTMIN, NULL, {sa_handler=0x7fbc929876b0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, 8) = 0
+rt_sigaction(SIGRTMIN, NULL, {sa_handler=0x7fbc929876b0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, 8) = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7fbc929876b0, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, NULL, {sa_handler=0x7fbc92987750, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, 8) = 0
+rt_sigaction(SIGRT_1, NULL, {sa_handler=0x7fbc92987750, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7fbc92987750, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_2, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_3, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_3, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_4, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_4, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_5, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_5, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_6, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_6, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_7, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_7, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_8, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_8, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_9, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_9, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_10, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_10, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_11, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_11, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_12, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_12, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_13, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_13, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_14, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_14, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_15, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_15, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_16, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_16, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_17, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_17, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_18, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_18, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_19, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_19, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_20, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_20, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_21, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_21, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_22, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_22, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_23, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_23, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_24, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_24, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_25, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_25, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_26, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_26, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_27, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_27, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_28, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_28, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_29, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_29, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_30, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_30, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_31, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_31, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigaction(SIGRT_32, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_32, {sa_handler=0x45a8e0, sa_mask=~[RTMIN RT_1], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7fbc92993df0}, NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fbc8fd3e000
+mprotect(0x7fbc8fd3f000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7fbc9053dfb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fbc9053e9d0, tls=0x7fbc9053e700, child_tidptr=0x7fbc9053e9d0) = 5005
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fbc8f53d000
+mprotect(0x7fbc8f53e000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7fbc8fd3cfb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fbc8fd3d9d0, tls=0x7fbc8fd3d700, child_tidptr=0x7fbc8fd3d9d0) = 5006
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fbc8e53b000
+mprotect(0x7fbc8e53c000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7fbc8ed3afb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fbc8ed3b9d0, tls=0x7fbc8ed3b700, child_tidptr=0x7fbc8ed3b9d0) = 5008
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+futex(0xc000060bc8, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xc000082148, FUTEX_WAKE_PRIVATE, 1) = 1
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fbc8dd3a000
+mprotect(0x7fbc8dd3b000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7fbc8e539fb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fbc8e53a9d0, tls=0x7fbc8e53a700, child_tidptr=0x7fbc8e53a9d0) = 5009
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+readlinkat(AT_FDCWD, "/proc/self/exe", "/home/asafniv/go/src/awesomeBot/"..., 128) = 46
+fcntl(0, F_GETFL)                       = 0x8002 (flags O_RDWR|O_LARGEFILE)
+futex(0xc000082148, FUTEX_WAKE_PRIVATE, 1) = 1
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbc8dcfa000
+fcntl(1, F_GETFL)                       = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+fcntl(2, F_GETFL)                       = 0x8001 (flags O_WRONLY|O_LARGEFILE)
+uname({sysname="Linux", nodename="solus", ...}) = 0
+newfstatat(AT_FDCWD, "/usr/lib64/golang/src", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/asafniv/go/src", {st_mode=S_IFDIR|0775, st_size=4096, ...}, 0) = 0
+futex(0xc000060848, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+epoll_create1(EPOLL_CLOEXEC)            = 4
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247504, u64=140447809826704}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc00006f9fc) = -1 EPERM (Operation not permitted)
+read(3, "hosts: files mymachines mdns4_mi"..., 1024) = 77
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 3
+epoll_ctl(4, EPOLL_CTL_ADD, 3, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247504, u64=140447809826704}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 3, 0xc00006f8cc) = -1 EPERM (Operation not permitted)
+fstat(3, {st_mode=S_IFREG|0644, st_size=40, ...}) = 0
+read(3, "\nnameserver 1.1.1.1\nnameserver 1"..., 65536) = 40
+read(3, "", 65496)                      = 0
+read(3, "", 65536)                      = 0
+uname({sysname="Linux", nodename="solus", ...}) = 0
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/etc/mdns.allow", 0xc0000ad968, 0) = -1 ENOENT (No such file or directory)
+futex(0xc000082148, FUTEX_WAKE_PRIVATE, 1) = 1
+getrlimit(RLIMIT_NOFILE, {rlim_cur=10000, rlim_max=10000}) = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=77, ...}) = 0
+read(3, "hosts: files mymachines mdns4_mi"..., 4096) = 77
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=40, ...}) = 0
+openat(AT_FDCWD, "/etc/host.conf", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+futex(0x7fbc9297f8e4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=40, ...}) = 0
+read(3, "\nnameserver 1.1.1.1\nnameserver 1"..., 4096) = 40
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+uname({sysname="Linux", nodename="solus", ...}) = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=245877, ...}) = 0
+mmap(NULL, 245877, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fbc8dcbd000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0003\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=55888, ...}) = 0
+mmap(NULL, 83768, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbc929aa000
+mmap(0x7fbc929ad000, 28672, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7fbc929ad000
+mmap(0x7fbc929b4000, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x7fbc929b4000
+mmap(0x7fbc929b7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xc000) = 0x7fbc929b7000
+mmap(0x7fbc929b9000, 22328, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fbc929b9000
+close(3)                                = 0
+mprotect(0x7fbc929b7000, 4096, PROT_READ) = 0
+munmap(0x7fbc8dcbd000, 245877)          = 0
+openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 3
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=274, ...}) = 0
+read(3, "127.0.0.1 localhost\n#0.0.0.0 acc"..., 4096) = 274
+lseek(3, 0, SEEK_CUR)                   = 274
+read(3, "", 4096)                       = 0
+lseek(3, 0, SEEK_CUR)                   = 274
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=245877, ...}) = 0
+mmap(NULL, 245877, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fbc8dcbd000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libnss_mymachines.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20i\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=233744, ...}) = 0
+mmap(NULL, 237752, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbc8dc82000
+mmap(0x7fbc8dc88000, 143360, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x7fbc8dc88000
+mmap(0x7fbc8dcab000, 53248, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x29000) = 0x7fbc8dcab000
+mmap(0x7fbc8dcb8000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x35000) = 0x7fbc8dcb8000
+mmap(0x7fbc8dcbc000, 184, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fbc8dcbc000
+close(3)                                = 0
+mprotect(0x7fbc8dcb8000, 12288, PROT_READ) = 0
+munmap(0x7fbc8dcbd000, 245877)          = 0
+rt_sigprocmask(SIG_BLOCK, [HUP USR1 USR2 PIPE ALRM CHLD TSTP URG VTALRM PROF WINCH IO], [], 8) = 0
+openat(AT_FDCWD, "/run/systemd/machines/api.telegram.org", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=245877, ...}) = 0
+mmap(NULL, 245877, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fbc8dcbd000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libnss_mdns4_minimal.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\f\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=10248, ...}) = 0
+mmap(NULL, 12304, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbc929a6000
+mmap(0x7fbc929a8000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fbc929a8000
+close(3)                                = 0
+mprotect(0x7fbc929a8000, 4096, PROT_READ) = 0
+munmap(0x7fbc8dcbd000, 245877)          = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=245877, ...}) = 0
+mmap(NULL, 245877, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fbc8dcbd000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libnss_dns.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\21\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=27056, ...}) = 0
+mmap(NULL, 28896, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbc8dc7a000
+mmap(0x7fbc8dc7b000, 16384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7fbc8dc7b000
+mmap(0x7fbc8dc7f000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5000) = 0x7fbc8dc7f000
+mmap(0x7fbc8dc80000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5000) = 0x7fbc8dc80000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/libresolv.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240C\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=97192, ...}) = 0
+mmap(NULL, 109184, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fbc8dc5f000
+mmap(0x7fbc8dc63000, 61440, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7fbc8dc63000
+mmap(0x7fbc8dc72000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x7fbc8dc72000
+mmap(0x7fbc8dc76000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7fbc8dc76000
+mmap(0x7fbc8dc78000, 6784, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fbc8dc78000
+close(3)                                = 0
+mprotect(0x7fbc8dc76000, 4096, PROT_READ) = 0
+mprotect(0x7fbc8dc80000, 4096, PROT_READ) = 0
+munmap(0x7fbc8dcbd000, 245877)          = 0
+socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 3
+connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("1.1.1.1")}, 16) = 0
+poll([{fd=3, events=POLLOUT}], 1, 0)    = 1 ([{fd=3, revents=POLLOUT}])
+sendmmsg(3, [{msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\360\263\1\0\0\1\0\0\0\0\0\0\3api\10telegram\3org\0\0\1"..., iov_len=34}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=34}, {msg_hdr={msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\240\271\1\0\0\1\0\0\0\0\0\0\3api\10telegram\3org\0\0\34"..., iov_len=34}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, msg_len=34}], 2, MSG_NOSIGNAL) = 2
+poll([{fd=3, events=POLLIN}], 1, 5000)  = 1 ([{fd=3, revents=POLLIN}])
+ioctl(3, FIONREAD, [347])               = 0
+recvfrom(3, "\360\263\201\200\0\1\0\1\0\4\0\10\3api\10telegram\3org\0\0\1"..., 2048, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("1.1.1.1")}, [28->16]) = 347
+poll([{fd=3, events=POLLIN}], 1, 4987)  = 1 ([{fd=3, revents=POLLIN}])
+ioctl(3, FIONREAD, [359])               = 0
+recvfrom(3, "\240\271\201\200\0\1\0\1\0\4\0\10\3api\10telegram\3org\0\0\34"..., 65536, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("1.1.1.1")}, [28->16]) = 359
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/gai.conf", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+futex(0x7fbc9297e044, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 3
+bind(3, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+getsockname(3, {sa_family=AF_NETLINK, nl_pid=5004, nl_groups=00000000}, [12]) = 0
+sendto(3, {{len=20, type=RTM_GETADDR, flags=NLM_F_REQUEST|NLM_F_DUMP, seq=1552643522, pid=0}, {ifa_family=AF_UNSPEC, ...}}, 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{{len=76, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [{{nla_len=8, nla_type=IFA_ADDRESS}, 127.0.0.1}, {{nla_len=8, nla_type=IFA_LOCAL}, 127.0.0.1}, {{nla_len=7, nla_type=IFA_LABEL}, "lo"}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=103, tstamp=103}}]}, {{len=88, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET, ifa_prefixlen=24, ifa_flags=0, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("enp59s0")}, [{{nla_len=8, nla_type=IFA_ADDRESS}, 10.100.102.7}, {{nla_len=8, nla_type=IFA_LOCAL}, 10.100.102.7}, {{nla_len=8, nla_type=IFA_BROADCAST}, 10.100.102.255}, {{nla_len=12, nla_type=IFA_LABEL}, "enp59s0"}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_NOPREFIXROUTE}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=2986, ifa_valid=2986, cstamp=3315, tstamp=500059}}]}, {{len=88, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET, ifa_prefixlen=16, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("docker0")}, [{{nla_len=8, nla_type=IFA_ADDRESS}, 172.17.0.1}, {{nla_len=8, nla_type=IFA_LOCAL}, 172.17.0.1}, {{nla_len=8, nla_type=IFA_BROADCAST}, 172.17.255.255}, {{nla_len=12, nla_type=IFA_LABEL}, "docker0"}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=2462, tstamp=2462}}]}, {{len=88, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET, ifa_prefixlen=24, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("virbr0")}, [{{nla_len=8, nla_type=IFA_ADDRESS}, 192.168.122.1}, {{nla_len=8, nla_type=IFA_LOCAL}, 192.168.122.1}, {{nla_len=8, nla_type=IFA_BROADCAST}, 192.168.122.255}, {{nla_len=11, nla_type=IFA_LABEL}, "virbr0"}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=2737, tstamp=2737}}]}, {{len=88, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET, ifa_prefixlen=24, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("vmnet1")}, [{{nla_len=8, nla_type=IFA_ADDRESS}, 192.168.124.1}, {{nla_len=8, nla_type=IFA_LOCAL}, 192.168.124.1}, {{nla_len=8, nla_type=IFA_BROADCAST}, 192.168.124.255}, {{nla_len=11, nla_type=IFA_LABEL}, "vmnet1"}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=3861, tstamp=3861}}]}, {{len=88, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET, ifa_prefixlen=24, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("vmnet8")}, [{{nla_len=8, nla_type=IFA_ADDRESS}, 192.168.160.1}, {{nla_len=8, nla_type=IFA_LOCAL}, 192.168.160.1}, {{nla_len=8, nla_type=IFA_BROADCAST}, 192.168.160.255}, {{nla_len=11, nla_type=IFA_LABEL}, "vmnet8"}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=3900, tstamp=3900}}]}, {{len=88, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET, ifa_prefixlen=16, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("tun0")}, [{{nla_len=8, nla_type=IFA_ADDRESS}, 10.5.0.6}, {{nla_len=8, nla_type=IFA_LOCAL}, 10.5.0.6}, {{nla_len=8, nla_type=IFA_BROADCAST}, 10.5.255.255}, {{nla_len=9, nla_type=IFA_LABEL}, "tun0"}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=4115, tstamp=4115}}]}], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 604
+recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{{len=72, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [{{nla_len=20, nla_type=IFA_ADDRESS}, ::1}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=103, tstamp=103}}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT}]}, {{len=72, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("enp59s0")}, [{{nla_len=20, nla_type=IFA_ADDRESS}, fe80::c825:abb9:a6e4:ca43}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=2391, tstamp=2550}}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_NOPREFIXROUTE}]}, {{len=72, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("vmnet1")}, [{{nla_len=20, nla_type=IFA_ADDRESS}, fe80::250:56ff:fec0:1}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=3861, tstamp=3861}}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT}]}, {{len=72, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("vmnet8")}, [{{nla_len=20, nla_type=IFA_ADDRESS}, fe80::250:56ff:fec0:8}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=3900, tstamp=3900}}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT}]}, {{len=72, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("tun0")}, [{{nla_len=20, nla_type=IFA_ADDRESS}, fdda:d0d0:cafe:443::1004}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=4116, tstamp=4116}}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT}]}, {{len=72, type=RTM_NEWADDR, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, {ifa_family=AF_INET6, ifa_prefixlen=64, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_LINK, ifa_index=if_nametoindex("tun0")}, [{{nla_len=20, nla_type=IFA_ADDRESS}, fe80::24a:cf26:112:8f1d}, {{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=4115, tstamp=4115}}, {{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT|IFA_F_STABLE_PRIVACY}]}], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 432
+recvmsg(3, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base={{len=20, type=NLMSG_DONE, flags=NLM_F_MULTI, seq=1552643522, pid=5004}, 0}, iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+close(3)                                = 0
+socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+connect(3, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("149.154.167.220")}, 16) = 0
+getsockname(3, {sa_family=AF_INET, sin_port=htons(55687), sin_addr=inet_addr("10.5.0.6")}, [28->16]) = 0
+close(3)                                = 0
+socket(AF_INET6, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
+connect(3, {sa_family=AF_INET6, sin6_port=htons(0), inet_pton(AF_INET6, "2001:67c:4e8:f004::9", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, 28) = 0
+getsockname(3, {sa_family=AF_INET6, sin6_port=htons(34016), inet_pton(AF_INET6, "fdda:d0d0:cafe:443::1004", &sin6_addr), sin6_flowinfo=htonl(0), sin6_scope_id=0}, [28]) = 0
+close(3)                                = 0
+futex(0xc9fef0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xc000082148, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xca3b80, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xca3b60, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xca0768, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+epoll_pwait(4, [], 128, 0, NULL, 0)     = 0
+epoll_pwait(4, [{EPOLLOUT, {u32=2379247504, u64=140447809826704}}], 128, -1, NULL, 0) = 1
+futex(0xc9fef0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+getsockopt(3, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+getpeername(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("149.154.167.220")}, [112->16]) = 0
+futex(0xc000060bc8, FUTEX_WAKE_PRIVATE, 1) = 1
+getsockname(3, {sa_family=AF_INET, sin_port=htons(55162), sin_addr=inet_addr("10.5.0.6")}, [112->16]) = 0
+setsockopt(3, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fbc8d45e000
+mprotect(0x7fbc8d45f000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7fbc8dc5dfb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fbc8dc5e9d0, tls=0x7fbc8dc5e700, child_tidptr=0x7fbc8dc5e9d0) = 5010
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+setsockopt(3, SOL_TCP, TCP_KEEPINTVL, [30], 4) = 0
+setsockopt(3, SOL_TCP, TCP_KEEPIDLE, [30], 4) = 0
+getrandom("\xfd\xa8\xd1\x37\xd1\x62\xf8\xb6\x88\xf0\xe4\xc1\x76\x28\x88\x8f\x30\x9e\xbc\xfe\xe7\x28\xd9\x93\x46\x7e\x72\xd7\x7b\x3f\x53\xb0", 32, 0) = 32
+futex(0xc000354848, FUTEX_WAKE_PRIVATE, 1) = 1
+getrandom("\x9e\xb4\xfe\xe8\x64\x6e\xab\xe4\x18\x6b\x31\xad\xc2\x0b\xca\xa4\x56\x6c\xd7\x13\xeb\x21\x09\xe9\x92\x97\x40\x3e\xc4\xee\x22\xaf", 32, 0) = 32
+getrandom("\x3a\xc7\x98\x54\x6c\xf1\x8d\xd6\x38\x0f\xd4\x45\x28\x91\x2b\xb5\xe9\x91\x49\xe3\x02\x3a\xf2\xcc\x2a\x7c\x8c\x5c\xcc\xa5\x0a\x5c", 32, 0) = 32
+write(3, "\26\3\1\0\351\1\0\0\345\3\3\236\264\376\350dn\253\344\30k1\255\302\v\312\244Vl\327\23\353"..., 238) = 238
+read(3, 0xc000309440, 517)              = -1 EAGAIN (Resource temporarily unavailable)
+futex(0xca0768, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+rt_sigprocmask(SIG_SETMASK, ~[RTMIN RT_1], [], 8) = 0
+mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fbc8c41c000
+mprotect(0x7fbc8c41d000, 8388608, PROT_READ|PROT_WRITE) = 0
+clone(child_stack=0x7fbc8cc1bfb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fbc8cc1c9d0, tls=0x7fbc8cc1c700, child_tidptr=0x7fbc8cc1c9d0) = 5012
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+futex(0xca0318, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xca0768, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc9fee0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xca0768, FUTEX_WAIT_PRIVATE, 0, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+futex(0xc0000824c8, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xca0768, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc9ff08, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9ff08, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fee0, FUTEX_WAKE_PRIVATE, 1)  = 1
+openat(AT_FDCWD, "/etc/ssl/certs/4304c5e5.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4731, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5243) = 4731
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/4304c5e5.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4731, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5243) = 4731
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/442adcac.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=3959, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4471) = 3959
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/442adcac.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=3959, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4471) = 3959
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/480720ec.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4407, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4919) = 4407
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/480720ec.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4407, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4919) = 4407
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/48bec511.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4513, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5025) = 4513
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/48bec511.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4513, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5025) = 4513
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/4a6481c9.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4718, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5230) = 4718
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/4a6481c9.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4718, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5230) = 4718
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/4bfab552.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4573, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5085) = 4573
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/4bfab552.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4573, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5085) = 4573
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/4d4ba017.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2987, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3499) = 2987
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/4d4ba017.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2987, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3499) = 2987
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/4f316efb.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7428, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7940) = 7428
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/4f316efb.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7428, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7940) = 7428
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5273a94c.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7719, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 8231) = 7719
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5273a94c.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7719, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 8231) = 7719
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5443e9e3.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4529, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5041) = 4529
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5443e9e3.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4529, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5041) = 4529
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/54657681.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7018, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7530) = 7018
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/54657681.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7018, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7530) = 7018
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/57bcb2da.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7441, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7953) = 7441
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/57bcb2da.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7441, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7953) = 7441
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5a4d6896.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7091, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7603) = 7091
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5a4d6896.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7091, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7603) = 7091
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5ad8a5d6.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4370, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4882) = 4370
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5ad8a5d6.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4370, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4882) = 4370
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5c44d531.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7366, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7878) = 7366
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5c44d531.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7366, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7878) = 7366
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5cd81ad7.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=6981, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7493) = 6981
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5cd81ad7.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=6981, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7493) = 6981
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5d3033c5.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4893, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5405) = 4893
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5d3033c5.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4893, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5405) = 4893
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5f15c80c.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=6865, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7377) = 6865
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/5f15c80c.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=6865, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7377) = 6865
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/607986c7.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4461, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4973) = 4461
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/607986c7.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4461, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4973) = 4461
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/626dceaf.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7056, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7568) = 7056
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/626dceaf.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7056, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7568) = 7056
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/62744ee1.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2987, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3499) = 2987
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/62744ee1.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2987, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3499) = 2987
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/6410666e.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7090, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7602) = 7090
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/6410666e.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7090, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7602) = 7090
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/653b494a.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4363, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4875) = 4363
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/653b494a.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4363, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4875) = 4363
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/6b99d060.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=5231, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5743) = 5231
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/6b99d060.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=5231, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5743) = 5231
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/6d41d539.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7024, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7536) = 7024
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/6d41d539.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7024, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7536) = 7024
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/6fa5da56.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7444, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7956) = 7444
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/6fa5da56.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7444, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7956) = 7444
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/706f604c.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4981, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5493) = 4981
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/706f604c.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4981, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5493) = 4981
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/749e9e03.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7078, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7590) = 7078
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/749e9e03.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7078, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7590) = 7078
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/75d1b2ed.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7190, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7702) = 7190
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/75d1b2ed.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7190, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7702) = 7190
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/76cb8f92.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4669, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5181) = 4669
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/76cb8f92.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4669, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5181) = 4669
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/76faf6c0.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=8004, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 8516) = 8004
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/76faf6c0.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=8004, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 8516) = 8004
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/7719f463.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=3007, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3519) = 3007
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/7719f463.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=3007, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3519) = 3007
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/773e07ad.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2875, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3387) = 2875
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/773e07ad.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2875, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3387) = 2875
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/7aaf71c0.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4857, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5369) = 4857
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/7aaf71c0.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4857, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5369) = 4857
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/7d0b38bd.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=3527, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4039) = 3527
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/7d0b38bd.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=3527, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4039) = 3527
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/7f3d5d1d.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2776, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3288) = 2776
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/7f3d5d1d.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2776, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3288) = 2776
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/812e17de.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4447, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4959) = 4447
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/812e17de.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4447, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4959) = 4447
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/8160b96c.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4856, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5368) = 4856
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/8160b96c.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4856, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5368) = 4856
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/861a399d.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4823, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5335) = 4823
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/861a399d.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4823, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5335) = 4823
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/8867006a.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7172, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7684) = 7172
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/8867006a.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7172, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7684) = 7172
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/8cb5ee0f.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2267, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 2779) = 2267
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/8cb5ee0f.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2267, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 2779) = 2267
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/8d86cdd1.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4264, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4776) = 4264
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/8d86cdd1.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4264, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4776) = 4264
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/930ac5d2.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7358, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7870) = 7358
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/930ac5d2.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7358, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7870) = 7358
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/93bc0acc.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4283, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4795) = 4283
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/93bc0acc.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4283, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4795) = 4283
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/988a38cb.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4828, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5340) = 4828
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/988a38cb.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4828, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5340) = 4828
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/9c2e7d30.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4125, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4637) = 4125
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/9c2e7d30.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4125, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4637) = 4125
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/9c8dfbd4.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2588, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3100) = 2588
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/9c8dfbd4.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2588, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3100) = 2588
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/9d04f354.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4481, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4993) = 4481
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/9d04f354.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4481, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4993) = 4481
+read(5, "", 512)                        = 0
+close(5)                                = 0
+epoll_pwait(4, [], 128, 0, NULL, 2)     = 0
+futex(0xc0004ce148, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/etc/ssl/certs/9f0f5fd6.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+futex(0xc9ff08, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+futex(0xc9ff08, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9ff08, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fee0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+openat(AT_FDCWD, "/etc/ssl/certs/a3418fda.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2627, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3139) = 2627
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/a3418fda.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2627, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3139) = 2627
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/a8dee976.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7453, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7965) = 7453
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/a8dee976.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7453, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7965) = 7453
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/a94d09e5.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=8644, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 9156) = 8644
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/a94d09e5.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=8644, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 9156) = 8644
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ad088e1d.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7164, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7676) = 7164
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ad088e1d.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7164, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7676) = 7164
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/aee5f10d.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4780, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5292) = 4780
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/aee5f10d.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4780, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5292) = 4780
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b0e59380.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2344, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 2856) = 2344
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b0e59380.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2344, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 2856) = 2344
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b1159c4c.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4650, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5162) = 4650
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b1159c4c.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4650, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5162) = 4650
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b1b8a7f3.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4708, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5220) = 4708
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b1b8a7f3.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4708, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5220) = 4708
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b204d74a.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=5221, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5733) = 5221
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b204d74a.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=5221, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5733) = 5221
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b66938e9.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4720, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5232) = 4720
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b66938e9.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4720, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5232) = 4720
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b727005e.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7001, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7513) = 7001
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b727005e.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7001, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7513) = 7001
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b7a5b843.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4357, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4869) = 4357
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/b7a5b843.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4357, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4869) = 4357
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ba89ed3b.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4795, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5307) = 4795
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ba89ed3b.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4795, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5307) = 4795
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c01cdfa2.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=5167, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5679) = 5167
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c01cdfa2.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=5167, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5679) = 5167
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c01eb047.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7012, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7524) = 7012
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c01eb047.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7012, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7524) = 7012
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c089bbbd.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2914, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3426) = 2914
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c089bbbd.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2914, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3426) = 2914
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c0ff1f52.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4526, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5038) = 4526
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c0ff1f52.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4526, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5038) = 4526
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c28a8a30.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4925, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5437) = 4925
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c28a8a30.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4925, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5437) = 4925
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c47d9980.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=8401, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 8913) = 8401
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c47d9980.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=8401, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 8913) = 8401
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c5e082db.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=5240, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5752) = 5240
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/c5e082db.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=5240, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5752) = 5240
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ca-certificates.crt", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=796723, ...}) = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fbc8c1fc000
+read(5, "Certificate:\n    Data:\n        V"..., 797235) = 796723
+read(5, "", 512)                        = 0
+close(5)                                = 0
+epoll_pwait(4, [], 128, 0, NULL, 1)     = 0
+futex(0xc0004c0148, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xc9ff08, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9ff08, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fee0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+sched_yield()                           = 0
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 0
+futex(0xca0768, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+futex(0xc000486148, FUTEX_WAKE_PRIVATE, 1) = 1
+openat(AT_FDCWD, "/etc/ssl/certs/dc45b0bd.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4522, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5034) = 4522
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/dc4d6a89.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7248, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7760) = 7248
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/dc4d6a89.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7248, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7760) = 7248
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/dd8e9d41.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2759, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3271) = 2759
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/dd8e9d41.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2759, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3271) = 2759
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/de6d66f3.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2598, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3110) = 2598
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/de6d66f3.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2598, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3110) = 2598
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/def36a68.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7475, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7987) = 7475
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/def36a68.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7475, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7987) = 7475
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e113c810.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4688, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5200) = 4688
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e113c810.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4688, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5200) = 4688
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e18bfb83.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7078, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7590) = 7078
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e18bfb83.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7078, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7590) = 7078
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e2799e36.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4702, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5214) = 4702
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e2799e36.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4702, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5214) = 4702
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e36a6752.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4568, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5080) = 4568
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e36a6752.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4568, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5080) = 4568
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e73d606e.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4584, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5096) = 4584
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e73d606e.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4584, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5096) = 4584
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e8de2f56.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7018, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7530) = 7018
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/e8de2f56.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7018, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7530) = 7018
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ee1365c0.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4526, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5038) = 4526
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ee1365c0.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4526, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5038) = 4526
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ee64a828.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4893, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5405) = 4893
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ee64a828.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4893, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5405) = 4893
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/eed8c118.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2899, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3411) = 2899
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/eed8c118.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2899, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3411) = 2899
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ef954a4e.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7070, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7582) = 7070
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ef954a4e.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7070, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7582) = 7070
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f060240e.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4580, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5092) = 4580
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f060240e.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4580, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5092) = 4580
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f081611a.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4714, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5226) = 4714
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f081611a.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4714, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5226) = 4714
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f0c70a8d.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=3032, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3544) = 3032
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f0c70a8d.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=3032, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3544) = 3032
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f30dd6ad.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2913, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3425) = 2913
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f30dd6ad.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=2913, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 3425) = 2913
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f3377b1b.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4286, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4798) = 4286
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f3377b1b.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4286, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4798) = 4286
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f387163d.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4749, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5261) = 4749
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f387163d.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4749, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5261) = 4749
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f39fc864.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4712, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5224) = 4712
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f39fc864.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4712, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5224) = 4712
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f51bb24c.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7936, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 8448) = 7936
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f51bb24c.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7936, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 8448) = 7936
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f90208f7.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=5443, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5955) = 5443
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/f90208f7.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=5443, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5955) = 5443
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/fc5a8f99.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7339, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7851) = 7339
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/fc5a8f99.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=7339, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 7851) = 7339
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/fe8a2cd8.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4397, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4909) = 4397
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/fe8a2cd8.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4397, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 4909) = 4397
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ff34af3f.0", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4890, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5402) = 4890
+read(5, "", 512)                        = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/etc/ssl/certs/ff34af3f.pem", O_RDONLY|O_CLOEXEC) = 5
+epoll_ctl(4, EPOLL_CTL_ADD, 5, {EPOLLIN|EPOLLOUT|EPOLLRDHUP|EPOLLET, {u32=2379247296, u64=140447809826496}}) = -1 EPERM (Operation not permitted)
+epoll_ctl(4, EPOLL_CTL_DEL, 5, 0xc00015b28c) = -1 EPERM (Operation not permitted)
+fstat(5, {st_mode=S_IFREG|0644, st_size=4890, ...}) = 0
+read(5, "Certificate:\n    Data:\n        V"..., 5402) = 4890
+read(5, "", 512)                        = 0
+close(5)                                = 0
+getrandom("\xef\x84\x84\x93\xd1\x6f\xd0\xff\xc2\x9a\x3c\x29\x47\x72\x6c\xdc\xe2\x5c\x5c\x18\xce\x2d\x98\xdb\x8a\x33\x56\xa8\xcc\xcf\xec\x5a", 32, 0) = 32
+write(3, "\26\3\3\0F\20\0\0BA\0040\243\256\374\371\200i\0072\352d\2046\321\343\374\2445Rv\267"..., 191) = 191
+read(3, 0xc0003a8000, 6306)             = -1 EAGAIN (Resource temporarily unavailable)
+futex(0xca0768, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+epoll_pwait(4, [], 128, 0, NULL, 0)     = 0
+futex(0xca0768, FUTEX_WAIT_PRIVATE, 0, NULL) = 0
+epoll_pwait(4, [], 128, 0, NULL, 0)     = 0
+futex(0xc000060bc8, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0xca3d80, FUTEX_WAIT_PRIVATE, 0, {tv_sec=29, tv_nsec=999986115}) = 0
+futex(0xca3d80, FUTEX_WAIT_PRIVATE, 0, {tv_sec=0, tv_nsec=299871526}) = -1 ETIMEDOUT (Connection timed out)
+futex(0xc9fef0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xc9fdf0, FUTEX_WAKE_PRIVATE, 1)  = 1
+futex(0xca3d80, FUTEX_WAIT_PRIVATE, 0, {tv_sec=89, tv_nsec=685509687}YVkUvmDQ3HY
+) = ?
++++ exited with 0 +++
