@@ -53,6 +53,32 @@ func main() {
 			handleError(err, sendError, *m)
 		}
 	})
+	// kick: remove user without banning
+	b.Handle("/kick", func(m *tb.Message) {
+		replied := m.ReplyTo
+		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
+		handleError(err, nil, *m)
+		user, err := b.ChatMemberOf(m.Chat, m.Sender)
+		handleError(err, nil, *m)
+		if user.CanRestrictMembers || // check if the sender is an admin or the group creator.
+			tb.Creator == sender.Role {
+			user, err := b.ChatMemberOf(m.Chat, replied.Sender)
+			handleError(err, nil, *m)
+			err = b.Ban(m.Chat, user)
+			if err != nil {
+				_, sendError := b.Send(m.Chat, "ERRRR")
+				handleError(err, sendError, *m)
+			}
+			err = b.Unban(m.Chat, m.ReplyTo.Sender)
+			if err != nil {
+				_, sendError := b.Send(m.Chat, "ERRRR")
+				handleError(err, sendError, *m)
+			}
+		} else { // runs when the sender doesn't have permission to kick users
+			_, sendError := b.Reply(m, "You don't have permission to kick users!")
+			handleError(err, sendError, *m)
+		}
+	})
 	b.Handle("/song", func(m *tb.Message) {
 		downloadVideo(m.Payload)
 		videoID := searchVideoID(m.Payload)
