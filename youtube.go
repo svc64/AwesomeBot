@@ -14,7 +14,10 @@ func downloadVideo(vidname string) {
 	// get the video object (with metadata)
 	vid := searchVideoID(vidname)
 	fmt.Println(vid)
-	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "--audio-format", "opus", "-o", vid + ".mp4")
+	mkCache := exec.Command("mkdir", ".cache")
+	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
+	mkCache.Run()
+	mkCache.Wait()
 	dlCmd.Run()
 	dlCmd.Wait()
 }

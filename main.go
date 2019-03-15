@@ -53,6 +53,12 @@ func main() {
 			handleError(err, sendError, *m)
 		}
 	})
-	downloadVideo("Eminem without me")
-	//b.Start()
+	b.Handle("/song", func(m *tb.Message) {
+		downloadVideo(m.Payload)
+		videoID := searchVideoID(m.Payload)
+		file := &tb.Audio{File: tb.FromDisk(".cache/" + videoID + ".aac")}
+		_ ,err := b.Reply(m, file)
+		handleError(nil, err, *m)
+	})
+	b.Start()
 }

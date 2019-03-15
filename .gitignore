@@ -10,3 +10,5 @@ out
 token
 # Dep stuff
 vendor
+# Music cache
+.cache
