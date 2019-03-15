@@ -8,18 +8,39 @@ import(
 	"os/exec"
 	"log"
 	"net/http"
+	"net/url"
+	"strings"
 )
 
 func downloadVideo(vidname string) {
-	// get the video object (with metadata)
-	vid := searchVideoID(vidname)
-	fmt.Println(vid)
-	mkCache := exec.Command("mkdir", ".cache")
-	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
-	mkCache.Run()
-	mkCache.Wait()
-	dlCmd.Run()
-	dlCmd.Wait()
+	if strings.HasPrefix(vidname, "http") {
+		// Filter vidname to get just the video ID
+		s := vidname
+		u, err := url.Parse(s)
+		handleGeneralError(err)
+		rawQ, _ := url.ParseQuery(u.RawQuery)
+		if rawQ["v"] != nil {
+			fmt.Println("Found YouTube video ID from URL:", rawQ["v"][0])
+			vid := rawQ["v"][0]
+			mkCache := exec.Command("mkdir", ".cache")
+			dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
+			mkCache.Run()
+			mkCache.Wait()
+			dlCmd.Run()
+			dlCmd.Wait()
+		} else {
+			fmt.Println("Can't find YouTube video ID from URL")
+		}
+	} else {
+		vid := searchVideoID(vidname)
+		fmt.Println("Downloading YouTube video ID: " + vid)
+		mkCache := exec.Command("mkdir", ".cache")
+		dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
+		mkCache.Run()
+		mkCache.Wait()
+		dlCmd.Run()
+		dlCmd.Wait()
+	}
 }
 
 // This API key is taken by decompiling a "spotify downloader" app that actually downloads from youtube
