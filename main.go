@@ -1,7 +1,7 @@
 package main
 import (
 	"fmt"
-	tb "gopkg.in/tucnak/telebot.v2"
+	tb "git.asafniv.me/blzit420/telebot.v2"
 	"os"
 	"time"
 )

@@ -4,7 +4,7 @@
 
 [[constraint]]
   branch = "v2"
-  name = "gopkg.in/tucnak/telebot.v2"
+  name = "git.asafniv.me/blzit420/telebot.v2"
 
 [prune]
   go-tests = true
