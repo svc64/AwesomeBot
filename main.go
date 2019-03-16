@@ -93,8 +93,8 @@ func main() {
 	b.Handle("/pin", func(m *tb.Message) {
 		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
 		handleError(err, nil, *m)
-		if sender.CanPinMessages || sender.Role == tb.Creator {
-			err := b.Pin(m.ReplyTo)
+		if sender.CanPinMessages || sender.Role == tb.Creator { // check if the sender can pin messages
+			err = b.Pin(m.ReplyTo)
 			handleError(nil, err, *m)
 		}
 	})
