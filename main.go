@@ -80,11 +80,7 @@ func main() {
 		}
 	})
 	b.Handle("/song", func(m *tb.Message) {
-		returnValue := downloadVideo(m.Payload)
-		if returnValue == 1 {
-			_ ,err := b.Reply(m, "Video is too big!")
-			handleError(nil, err, *m)
-		}
+		downloadVideo(m.Payload)
 		videoID := searchVideoID(m.Payload)
 		file := &tb.Audio{File: tb.FromDisk(".cache/" + videoID + ".aac")}
 		_ ,err := b.Reply(m, file)
