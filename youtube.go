@@ -44,16 +44,15 @@ func ytdl(vid string) {
 	dlCmd.Wait()
 }
 
-// This API key is taken by decompiling a "spotify downloader" app that actually downloads from youtube
-const developerKey = "AIzaSyBzLRQidJbt4BMB8SS7-6c0Nmw-IEfQ_BA"
+// Put your own API key here - this one is restricted to my IP
+// If you want a key that doesn't identify you, you can probably get one by decompiling apps and copying the key.
+const developerKey = "AIzaSyAcJAjE4cvQsuHfJmE-EVTK5C88DUiPHIg"
 
 func searchVideoID(name string) string {
 	flag.Parse()
-
 	client := &http.Client{
 		Transport: &transport.APIKey{Key: developerKey},
 	}
-
 	service, err := youtube.New(client)
 	if err != nil {
 		log.Fatalf("Error creating new YouTube client: %v", err)
@@ -76,7 +75,6 @@ func searchVideoID(name string) string {
 			videos[item.Id.VideoId] = item.Snippet.Title
 		}
 	}
-
 	return getID(videos)
 }
 
