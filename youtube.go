@@ -16,13 +16,13 @@ func downloadVideo(vidname string) (string, bool) { // the bool returns true if 
 	if strings.HasPrefix(vidname, "http://") ||
 		strings.HasPrefix(vidname, "https://")  {
 		// Filter vidname to get just the video ID
-		s := vidname
-		u, err := url.Parse(s)
+		addr := vidname
+		u, err := url.Parse(addr)
 		handleGeneralError(err)
 		rawQ, _ := url.ParseQuery(u.RawQuery)
 		if rawQ["v"] != nil {
-			fmt.Println("Found YouTube video ID from URL:", rawQ["v"][0])
 			vid := rawQ["v"][0]
+			fmt.Println("Found YouTube video ID from URL:" + vid)
 			return vid, true
 			ytdl(vid)
 		} else {
@@ -40,11 +40,15 @@ func downloadVideo(vidname string) (string, bool) { // the bool returns true if 
 // vid = video ID
 func ytdl(vid string) {
 	mkCache := exec.Command("mkdir", ".cache")
-	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "-f", "bestvideo[height<=?720]+bestaudio/best" , "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
-	mkCache.Run()
-	mkCache.Wait()
-	dlCmd.Run()
-	dlCmd.Wait()
+	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "-f", "bestvideo[height<=?720]+bestaudio/best", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
+	err := mkCache.Run()
+	handleGeneralError(err)
+	err = mkCache.Wait()
+	handleGeneralError(err)
+	err = dlCmd.Run()
+	handleGeneralError(err)
+	err = dlCmd.Wait()
+	handleGeneralError(err)
 }
 
 // Put your own API key here - this one is restricted to my IP
