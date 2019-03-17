@@ -12,7 +12,7 @@ import(
 	"strings"
 )
 
-func downloadVideo(vidname string) {
+func downloadVideo(vidname string) (string, bool) { // the bool returns true if we got the video ID, false if not.
 	if strings.HasPrefix(vidname, "http://") ||
 		strings.HasPrefix(vidname, "https://")  {
 		// Filter vidname to get just the video ID
@@ -23,21 +23,24 @@ func downloadVideo(vidname string) {
 		if rawQ["v"] != nil {
 			fmt.Println("Found YouTube video ID from URL:", rawQ["v"][0])
 			vid := rawQ["v"][0]
+			return vid, true
 			ytdl(vid)
 		} else {
 			fmt.Println("Can't find YouTube video ID from URL")
 		}
 	} else {
 		vid := searchVideoID(vidname)
+		return vid, true
 		fmt.Println("Downloading YouTube video ID: " + vid)
 		ytdl(vid)
 	}
+	return "", false
 }
 
 // vid = video ID
 func ytdl(vid string) {
 	mkCache := exec.Command("mkdir", ".cache")
-	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
+	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "-f", "bestvideo[height<=?720]+bestaudio/best" , "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
 	mkCache.Run()
 	mkCache.Wait()
 	dlCmd.Run()
@@ -57,17 +60,14 @@ func searchVideoID(name string) string {
 	if err != nil {
 		log.Fatalf("Error creating new YouTube client: %v", err)
 	}
-
 	// Make the API call to YouTube.
 	call := service.Search.List("id,snippet").
 		Q(name).
 		MaxResults(1)
 	response, err := call.Do()
 	handleGeneralError(err)
-
 	// Group video results in a separate list.
 	videos := make(map[string]string)
-
 	// Iterate through each item and add it to the correct list.
 	for _, item := range response.Items {
 		switch item.Id.Kind {

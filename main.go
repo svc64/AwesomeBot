@@ -80,11 +80,12 @@ func main() {
 		}
 	})
 	b.Handle("/song", func(m *tb.Message) {
-		downloadVideo(m.Payload)
-		videoID := searchVideoID(m.Payload)
-		file := &tb.Audio{File: tb.FromDisk(".cache/" + videoID + ".aac")}
-		_ ,err := b.Reply(m, file)
-		handleError(nil, err, *m)
+		videoID, succeeded := downloadVideo(m.Payload)  // It also downloads the video and returns the ID
+		if succeeded { // if it succeeded, send the file from disk
+			file := &tb.Audio{File: tb.FromDisk(".cache/" + videoID + ".mp4.aac")}
+			_ ,err := b.Reply(m, file)
+			handleError(nil, err, *m)
+		}
 	})
 	b.Handle("/pin", func(m *tb.Message) {
 		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
