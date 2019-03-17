@@ -23,16 +23,16 @@ func downloadVideo(vidname string) (string, bool) { // the bool returns true if 
 		if rawQ["v"] != nil {
 			vid := rawQ["v"][0]
 			fmt.Println("Found YouTube video ID from URL:" + vid)
-			return vid, true
 			ytdl(vid)
+			return vid, true
 		} else {
 			fmt.Println("Can't find YouTube video ID from URL")
 		}
 	} else {
 		vid := searchVideoID(vidname)
-		return vid, true
 		fmt.Println("Downloading YouTube video ID: " + vid)
 		ytdl(vid)
+		return vid, true
 	}
 	return "", false
 }
@@ -43,11 +43,7 @@ func ytdl(vid string) {
 	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "-f", "bestvideo[height<=?720]+bestaudio/best", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
 	err := mkCache.Run()
 	handleGeneralError(err)
-	err = mkCache.Wait()
-	handleGeneralError(err)
 	err = dlCmd.Run()
-	handleGeneralError(err)
-	err = dlCmd.Wait()
 	handleGeneralError(err)
 }
 
