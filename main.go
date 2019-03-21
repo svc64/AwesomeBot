@@ -114,9 +114,19 @@ func main() {
 	b.Handle("/song", func(m *tb.Message) {
 		videoID, succeeded := downloadVideo(m.Payload)  // It also downloads the video and returns the ID
 		if succeeded { // if it succeeded, send the file from disk
-			file := &tb.Audio{File: tb.FromDisk(".cache/" + videoID + ".mp4.aac")}
-			_ ,err := b.Reply(m, file)
-			handleError(nil, err, *m)
+			filename := ".cache/" + videoID + ".mp4.aac"
+			/* Some songs are getting an ".mp4.aac" file extension and some don't
+			so we'll check for that and send a .aac file it it exists. */
+			if fileExists(filename) {
+				file := &tb.Audio{File: tb.FromDisk(filename)}
+				_ ,err = b.Reply(m, file)
+				handleError(nil, err, *m)
+			} else { // song.mp4.aac doesn't exist so we'll try .aac
+				filename = ".cache/" + videoID + ".aac"
+				file := &tb.Audio{File: tb.FromDisk(filename)}
+				_ ,err = b.Reply(m, file)
+				handleError(nil, err, *m)
+			}
 		}
 	})
 	b.Handle("/pin", func(m *tb.Message) {
