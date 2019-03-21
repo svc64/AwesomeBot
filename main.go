@@ -116,7 +116,7 @@ func main() {
 		if succeeded { // if it succeeded, send the file from disk
 			filename := ".cache/" + videoID + ".mp4.aac"
 			/* Some songs are getting an ".mp4.aac" file extension and some don't
-			so we'll check for that and send a .aac file it it exists. */
+			so we'll check for that and send a .aac file if it exists. */
 			if fileExists(filename) {
 				file := &tb.Audio{File: tb.FromDisk(filename)}
 				_ ,err = b.Reply(m, file)
