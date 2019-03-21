@@ -52,12 +52,20 @@ func main() {
 		handleError(err, nil, *m)
 		if user.CanRestrictMembers || // check if the sender is an admin or the group creator.
 			tb.Creator == sender.Role {
-			user, err := b.ChatMemberOf(m.Chat, replied.Sender)
+			banUser, err := b.ChatMemberOf(m.Chat, replied.Sender)
 			handleError(err, nil, *m)
-			err = b.Ban(m.Chat, user)
-			if err != nil {
-				_, sendError := b.Send(m.Chat, "ERRRR")
-				handleError(err, sendError, *m)
+			if banUser.Role == tb.Administrator { // Check if the user is an admin or creator before banning.
+				_, err := b.Reply(m, "Only the group creator can ban admins")
+				handleError(nil, err, *m)
+			} else if banUser.Role == tb.Creator {
+				_, err := b.Reply(m, "The group creator can't be banned")
+				handleError(nil, err, *m)
+			} else {
+				err = b.Ban(m.Chat, banUser)
+				if err != nil {
+					_, sendError := b.Send(m.Chat, "ERRRR")
+					handleError(err, sendError, *m)
+				}
 			}
 		} else { // runs when the sender doesn't have permission to ban users
 			_, sendError := b.Reply(m, "You don't have permission to ban users!")
