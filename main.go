@@ -3,6 +3,7 @@ import (
 	"fmt"
 	tb "git.asafniv.me/blzit420/telebot.v2"
 	"os"
+	"strconv"
 	"time"
 )
 var token string // should be provided at build time
@@ -92,6 +93,20 @@ func main() {
 		handleError(err, nil, *m)
 		if sender.CanPinMessages || sender.Role == tb.Creator { // check if the sender can pin messages
 			err = b.Pin(m.ReplyTo)
+			handleError(nil, err, *m)
+		}
+	})
+	// id: get a user's ID
+	b.Handle("/id", func(m *tb.Message) {
+		if m.IsReply() { // if it's a reply we should get the ID of the user that the sender replied to
+			id := strconv.Itoa(m.ReplyTo.Sender.ID) // convert an int to string
+			msg := "User ID: " + id
+			_ ,err := b.Send(m.Chat, msg)
+			handleError(nil, err, *m)
+		} else {
+			id := strconv.Itoa(m.Sender.ID)
+			msg := "User ID: " + id
+			_ ,err := b.Send(m.Chat, msg)
 			handleError(nil, err, *m)
 		}
 	})
