@@ -37,7 +37,7 @@ func main() {
 			_, sendError := b.Send(m.Chat, "ERRRRR")
 			handleError(err, sendError, *m)
 		}
-		err := b.Ban(m.Chat, user)
+		err = b.Ban(m.Chat, user)
 		if err != nil {
 			_, sendError := b.Send(m.Chat, "ERRRR")
 			handleError(err, sendError, *m)
@@ -90,10 +90,10 @@ func main() {
 			kickUser, err := b.ChatMemberOf(m.Chat, replied.Sender)
 			handleError(err, nil, *m)
 			if kickUser.Role == tb.Administrator { // Check if the user is an admin or creator before kicking.
-				_, err := b.Reply(m, "Only the group creator can kick admins")
+				_, err = b.Reply(m, "Only the group creator can kick admins")
 				handleError(nil, err, *m)
 			} else if kickUser.Role == tb.Creator {
-				_, err := b.Reply(m, "The group creator can't be kicked")
+				_, err = b.Reply(m, "The group creator can't be kicked")
 				handleError(nil, err, *m)
 			} else {
 				if kickUser != bot { // Prevent the bot from kicking itself
@@ -142,12 +142,12 @@ func main() {
 		if m.IsReply() { // if it's a reply we should get the ID of the user that the sender replied to
 			id := strconv.Itoa(m.ReplyTo.Sender.ID) // convert an int to string
 			msg := "User ID: " + id
-			_ ,err := b.Send(m.Chat, msg)
+			_ ,err = b.Send(m.Chat, msg)
 			handleError(nil, err, *m)
 		} else {
 			id := strconv.Itoa(m.Sender.ID)
 			msg := "User ID: " + id
-			_ ,err := b.Send(m.Chat, msg)
+			_ ,err = b.Send(m.Chat, msg)
 			handleError(nil, err, *m)
 		}
 	})
