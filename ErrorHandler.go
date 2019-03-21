@@ -39,7 +39,7 @@ func sendEvent(err error, m tb.Message) {
 	raven.CaptureErrorAndWait(err, nil)
 }
 
-func handleGeneralError(err error) { // notifyChat = if the bot should sent an error message in the chat **AND FAILED TO**.
+func handleGeneralError(err error) {
 	if err != nil {
 		sentryError := raven.SetDSN(DSN)
 		if sentryError != nil {
