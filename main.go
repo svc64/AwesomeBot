@@ -45,71 +45,21 @@ func main() {
 	})
 	// handle bans
 	b.Handle("/ban", func(m *tb.Message) {
-		replied := m.ReplyTo
 		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
 		handleError(err, nil, *m)
-		user, err := b.ChatMemberOf(m.Chat, m.Sender)
 		handleError(err, nil, *m)
 		bot, err := b.ChatMemberOf(m.Chat, b.Me)
 		handleError(err, nil, *m)
-		if user.CanRestrictMembers || // check if the sender is an admin or the group creator.
-			tb.Creator == sender.Role && bot.CanRestrictMembers { // also check if the bot can ban users
-			banUser, err := b.ChatMemberOf(m.Chat, replied.Sender)
-			handleError(err, nil, *m)
-			if banUser.Role == tb.Administrator { // Check if the user is an admin or creator before banning.
-				_, err := b.Reply(m, "Only the group creator can ban admins")
-				handleError(nil, err, *m)
-			} else if banUser.Role == tb.Creator {
-				_, err := b.Reply(m, "The group creator can't be banned")
-				handleError(nil, err, *m)
-			} else {
-				if banUser != bot { // Prevent the bot from kicking itself
-					err = b.Ban(m.Chat, banUser)
-						handleError(err, nil, *m)
-				}
-			}
-		} else if !bot.CanRestrictMembers {
-			_, sendError := b.Reply(m, "I don't have permission to ban users!")
-			handleError(nil, sendError, *m)
-		} else { // runs when the sender doesn't have permission to ban users
-			_, sendError := b.Reply(m, "You don't have permission to ban users!")
-			handleError(err, sendError, *m)
-		}
+		banUser(*b, *sender, *bot, m, false)
 	})
 	// kick: remove user without banning
 	b.Handle("/kick", func(m *tb.Message) {
-		replied := m.ReplyTo
 		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
 		handleError(err, nil, *m)
-		user, err := b.ChatMemberOf(m.Chat, m.Sender)
 		handleError(err, nil, *m)
 		bot, err := b.ChatMemberOf(m.Chat, b.Me)
 		handleError(err, nil, *m)
-		if user.CanRestrictMembers || // check if the sender is an admin or the group creator.
-			tb.Creator == sender.Role && bot.CanRestrictMembers { // also check if the bot can kick users
-			kickUser, err := b.ChatMemberOf(m.Chat, replied.Sender)
-			handleError(err, nil, *m)
-			if kickUser.Role == tb.Administrator { // Check if the user is an admin or creator before kicking.
-				_, err = b.Reply(m, "Only the group creator can kick admins")
-				handleError(nil, err, *m)
-			} else if kickUser.Role == tb.Creator {
-				_, err = b.Reply(m, "The group creator can't be kicked")
-				handleError(nil, err, *m)
-			} else {
-				if kickUser != bot { // Prevent the bot from kicking itself
-					err = b.Ban(m.Chat, kickUser)
-					handleError(err, nil, *m)
-					err = b.Unban(m.Chat, m.ReplyTo.Sender)
-					handleError(err, nil, *m)
-				}
-			}
-		} else if !bot.CanRestrictMembers { // runs when the sender doesn't have permission to ban users
-			_, sendError := b.Reply(m, "I don't have permission to kick users!")
-			handleError(nil, sendError, *m)
-		} else { // runs when the sender doesn't have permission to kick users
-			_, sendError := b.Reply(m, "You don't have permission to kick users!")
-			handleError(err, sendError, *m)
-		}
+		banUser(*b, *sender, *bot, m, true)
 	})
 	b.Handle("/song", func(m *tb.Message) {
 		videoID, succeeded := downloadVideo(m.Payload)  // It also downloads the video and returns the ID
