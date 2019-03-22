@@ -96,7 +96,7 @@ func main() {
 			handleError(nil, err, *m)
 		} else {
 			id := strconv.Itoa(m.Sender.ID)
-			msg := "User ID: " + id
+			msg := "Your ID: " + id
 			_ ,err = b.Send(m.Chat, msg)
 			handleError(nil, err, *m)
 		}
