@@ -111,5 +111,20 @@ func main() {
 			b.Reply(m, "Reply to a message with this command to get it's ID")
 		}
 	})
+	// purge: delete every message since m.ReplyTo
+	b.Handle("/purge", func(m *tb.Message) {
+		startID := m.ReplyTo.ID
+		endID := m.ID
+		for endID>startID {
+			startIDString := strconv.Itoa(startID)
+			params := map[string]string{
+				"chat_id":    strconv.FormatInt(m.Chat.ID, 10),
+				"message_id": startIDString,
+			}
+
+			b.Raw("deleteMessage", params)
+			startID++
+		}
+	})
 	b.Start()
 }
