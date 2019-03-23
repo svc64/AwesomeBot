@@ -113,17 +113,27 @@ func main() {
 	})
 	// purge: delete every message since m.ReplyTo
 	b.Handle("/purge", func(m *tb.Message) {
-		startID := m.ReplyTo.ID
-		endID := m.ID
-		for endID>startID {
-			startIDString := strconv.Itoa(startID)
-			params := map[string]string{
-				"chat_id":    strconv.FormatInt(m.Chat.ID, 10),
-				"message_id": startIDString,
+		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
+		handleError(err, nil, *m)
+		bot, err := b.ChatMemberOf(m.Chat, b.Me)
+		handleError(err, nil, *m)
+		if sender.CanDeleteMessages ||
+			tb.Creator == sender.Role && bot.CanDeleteMessages {
+			startID := m.ReplyTo.ID
+			endID := m.ID
+			for endID>=startID {
+				startIDString := strconv.Itoa(startID)
+				params := map[string]string{
+					"chat_id":    strconv.FormatInt(m.Chat.ID, 10),
+					"message_id": startIDString,
+				}
+				b.Raw("deleteMessage", params)
+				startID++
 			}
-
-			b.Raw("deleteMessage", params)
-			startID++
+		} else if !bot.CanDeleteMessages {
+			b.Reply(m, "I don't have permission to delete messages!")
+		} else if !sender.CanDeleteMessages {
+			b.Delete(m)
 		}
 	})
 	b.Start()
