@@ -101,5 +101,15 @@ func main() {
 			handleError(nil, err, *m)
 		}
 	})
+	// mid: get a message's ID
+	b.Handle("/mid", func(m *tb.Message) {
+		if m.IsReply() {
+			id := strconv.Itoa(m.ReplyTo.ID)
+			msg := "Message ID: " + id
+			b.Reply(m, msg)
+		} else {
+			b.Reply(m, "Reply to a message with this command to get it's ID")
+		}
+	})
 	b.Start()
 }
