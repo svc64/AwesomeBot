@@ -3,11 +3,11 @@
 
 [[projects]]
   branch = "v2"
-  digest = "1:cdb99928ddb6141867515a3af95c41bcd02075bebd3965a6e11ddedb8b22c0e3"
+  digest = "1:864326818109e9aab8ee24907dcb8eb8b288aef2314e2c30ee9ceefaaeb27f3e"
   name = "git.asafniv.me/blzit420/telebot.v2"
   packages = ["."]
   pruneopts = "UT"
-  revision = "e6cfaa833930549e4d3aff4af1b9d502b2114d52"
+  revision = "4c0b8ac9fbc4dd8a7fc90030027301e73fbd9e05"
 
 [[projects]]
   digest = "1:fed1f537c2f1269fe475a8556c393fe466641682d73ef8fd0491cd3aa1e47bad"
