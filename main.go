@@ -55,7 +55,6 @@ func main() {
 	b.Handle("/kick", func(m *tb.Message) {
 		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
 		handleError(err, nil, *m)
-		handleError(err, nil, *m)
 		bot, err := b.ChatMemberOf(m.Chat, b.Me)
 		handleError(err, nil, *m)
 		banUser(*b, *sender, *bot, m, true)
