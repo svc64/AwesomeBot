@@ -51,7 +51,7 @@ func downloadVideo(vidname string) (string, bool) { // the bool returns true if 
 // vid = video ID
 func ytdl(vid string) {
 	mkCache := exec.Command("mkdir", ".cache")
-	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "-f", "bestvideo[height<=?720]+bestaudio/best", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
+	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "-f", "bestaudio[filesize<800M]", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
 	err := mkCache.Run()
 	handleGeneralError(err)
 	err = dlCmd.Run()
