@@ -20,6 +20,7 @@ import(
 	"net/http"
 	"net/url"
 	"strings"
+	tb "git.asafniv.me/blzit420/telebot.v2"
 )
 
 func downloadVideo(vidname string) (string, bool) { // the bool returns true if we got the video ID, false if not.
@@ -93,4 +94,20 @@ func getID(matches map[string]string) string {
 		return id
 	}
 	return ""
+}
+
+func sendSong(b *tb.Bot, videoID string, m *tb.Message) {
+	filename := ".cache/" + videoID + ".mp4.aac"
+	/* Some songs are getting an ".mp4.aac" file extension and some don't
+	so we'll check for that and send a .aac file if it exists. */
+	if fileExists(filename) {
+		file := &tb.Audio{File: tb.FromDisk(filename)}
+		_ ,err := b.Reply(m, file)
+		handleError(nil, err, *m)
+	} else { // song.mp4.aac doesn't exist so we'll try .aac
+		filename = ".cache/" + videoID + ".aac"
+		file := &tb.Audio{File: tb.FromDisk(filename)}
+		_ ,err := b.Reply(m, file)
+		handleError(nil, err, *m)
+	}
 }
