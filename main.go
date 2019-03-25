@@ -121,7 +121,7 @@ func main() {
 			tb.Creator == sender.Role && bot.CanDeleteMessages {
 				err = b.Purge(m.Chat, m.ReplyTo, m)
 				handleError(err, nil, *m)
-		} else if !bot.CanDeleteMessages {
+		} else if !bot.CanDeleteMessages && m.Chat.Type != tb.ChatPrivate {
 			_ ,err = b.Reply(m, "I don't have permission to delete messages!")
 			handleError(err, nil, *m)
 		} else if !sender.CanDeleteMessages {
