@@ -129,5 +129,34 @@ func main() {
 			handleError(err, nil, *m)
 		}
 	})
+	b.Handle("/delete", func(m *tb.Message) {
+		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
+		handleError(err, nil, *m)
+		bot, err := b.ChatMemberOf(m.Chat, b.Me)
+		handleError(err, nil, *m)
+		if sender.CanDeleteMessages ||
+			tb.Creator == sender.Role && bot.CanDeleteMessages {
+				err = b.Delete(m.ReplyTo)
+				handleError(err, nil, *m)
+				err = b.Delete(m)
+				handleError(err, nil, *m)
+		} else if !bot.CanDeleteMessages && m.Chat.Type != tb.ChatPrivate {
+			_ ,err = b.Reply(m, "I don't have permission to delete messages!")
+			handleError(err, nil, *m)
+		} else if !sender.CanDeleteMessages && m.Chat.Type != tb.ChatPrivate && m.Sender != m.ReplyTo.Sender { // if the sender can't delete messages we'll delete their command
+			err = b.Delete(m)
+			handleError(err, nil, *m)
+		} else if m.Chat.Type == tb.ChatPrivate && m.ReplyTo.Sender == b.Me { // the user can delete the bot's messages in PM
+			err = b.Delete(m.ReplyTo)
+			handleError(err, nil, *m)
+			err = b.Delete(m)
+			handleError(err, nil, *m)
+		} else if m.Sender == m.ReplyTo.Sender && m.Chat.Type != tb.ChatPrivate { // the sender can delete their own messages
+			err = b.Delete(m.ReplyTo)
+			handleError(err, nil, *m)
+			err = b.Delete(m)
+			handleError(err, nil, *m)
+		}
+	})
 	b.Start()
 }
