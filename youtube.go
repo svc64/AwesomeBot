@@ -45,6 +45,7 @@ func downloadVideo(vidname string) (string, bool) { // the bool returns true if 
 		ytdl(vid)
 		return vid, true
 	}
+	return "", false
 }
 
 // vid = video ID
