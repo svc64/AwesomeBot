@@ -48,7 +48,6 @@ func downloadVideo(vidname string) (string, bool) { // the bool returns true if 
 	} else {
 		return ID, true
 	}
-	return "", false
 }
 
 // vid = video ID
