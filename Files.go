@@ -19,6 +19,8 @@ func fileExists(name string) bool {
 		if os.IsNotExist(err) {
 			return false
 		}
+	} else {
+		return true
 	}
-	return true
+	return false
 }
