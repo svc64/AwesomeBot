@@ -61,9 +61,20 @@ func main() {
 		banUser(*b, *sender, *bot, m, true)
 	})
 	b.Handle("/song", func(m *tb.Message) {
+		// notify the user
+		status ,err := b.Reply(m, "Downloading song...")
+		handleError(nil, err, *m)
 		videoID, succeeded := downloadVideo(m.Payload)  // It also downloads the video and returns the ID
+		err = b.Delete(status)
+		handleError(err, nil, *m)
 		if succeeded { // if it succeeded, send the file from disk
 			sendSong(b, videoID, m)
+		} else {
+			status ,err = b.Reply(m, "Download failed!")
+			handleError(nil, err, *m)
+			// Delete after a minute
+			time.Sleep(time.Minute)
+			err = b.Delete(status)
 		}
 	})
 	b.Handle("/pin", func(m *tb.Message) {
