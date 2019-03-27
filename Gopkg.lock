@@ -10,22 +10,6 @@
   version = "v0.37.2"
 
 [[projects]]
-  branch = "master"
-  digest = "1:ddb81b3f870ddc76c6dbc2e5ec86d8ccb33577d9f3d701fe1dfbe59dfb2fec61"
-  name = "git.asafniv.me/blzit420/telebot.v2"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "29bd3707020c2b3a297d11d7f58c158e81d1cb79"
-
-[[projects]]
-  digest = "1:c47f4964978e211c6e566596ec6246c329912ea92e9bb99c00798bb4564c5b09"
-  name = "github.com/armon/go-radix"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "1a2de0c21c94309923825da3df33a4381872c795"
-  version = "v1.0.0"
-
-[[projects]]
   digest = "1:fed1f537c2f1269fe475a8556c393fe466641682d73ef8fd0491cd3aa1e47bad"
   name = "github.com/certifi/gocertifi"
   packages = ["."]
@@ -62,14 +46,6 @@
   pruneopts = "UT"
   revision = "7087cb70de9f7a8bc0a10c375cb0d2280a8edf9c"
   version = "v0.5.1"
-
-[[projects]]
-  digest = "1:61332bb44d05257bbf0356d8400a8b30fe0b9fdc3b72b8b55661da8f0a4f39ae"
-  name = "github.com/mitchellh/hashstructure"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "a38c50148365edc8df43c1580c48fb2b3a1e9cd7"
-  version = "v1.0.0"
 
 [[projects]]
   digest = "1:cf31692c14422fa27c83a05292eb5cbe0fb2775972e8f1f8446a71549bd8980b"
@@ -261,7 +237,6 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "git.asafniv.me/blzit420/telebot.v2",
     "github.com/getsentry/raven-go",
     "google.golang.org/api/googleapi/transport",
     "google.golang.org/api/youtube/v3",
