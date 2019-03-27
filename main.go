@@ -56,7 +56,7 @@ func main() {
 	b.Handle("/song", func(m *tb.Message) {
 		// notify the user
 		status ,err := b.Reply(m, "Downloading song...")
-		checkError(nil, m)
+		checkError(err, m)
 		videoID, succeeded := downloadVideo(m.Payload)  // It also downloads the video and returns the ID
 		err = b.Delete(status)
 		checkError(err, m)
@@ -64,7 +64,7 @@ func main() {
 			sendSong(b, videoID, m)
 		} else {
 			status ,err = b.Reply(m, "Download failed!")
-			checkError(nil, m)
+			checkError(err, m)
 			// Delete after a minute
 			time.Sleep(time.Minute)
 			err = b.Delete(status)
@@ -75,7 +75,7 @@ func main() {
 		checkError(err, m)
 		if sender.CanPinMessages || sender.Role == tb.Creator { // check if the sender can pin messages
 			err = b.Pin(m.ReplyTo)
-			checkError(nil, m)
+			checkError(err, m)
 		}
 	})
 	// id: get a user's ID
@@ -119,7 +119,8 @@ func main() {
 				m.ID++
 			}
 		} else if !bot.CanDeleteMessages {
-			b.Reply(m, "I don't have permission to delete messages!")
+			_, err := b.Reply(m, "I don't have permission to delete messages!")
+			checkError(err, m)
 		} else if !sender.CanDeleteMessages {
 			err = b.Delete(m)
 			checkError(err, m)
