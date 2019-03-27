@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+rm -rf out
 NAME=awesomeBot
 source token
 mkdir -p out
