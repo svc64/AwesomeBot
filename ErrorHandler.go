@@ -11,7 +11,7 @@
 package main
 import (
 	"github.com/getsentry/raven-go"
-	tb "git.asafniv.me/blzit420/telebot.v2"
+	tb "gopkg.in/tucnak/telebot.v2"
 	"fmt"
 	"errors"
 )

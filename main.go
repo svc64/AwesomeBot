@@ -11,7 +11,7 @@
 package main
 import (
 	"fmt"
-	tb "git.asafniv.me/blzit420/telebot.v2"
+	tb "gopkg.in/tucnak/telebot.v2"
 	"os"
 	"strconv"
 	"time"
