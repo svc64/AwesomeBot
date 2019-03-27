@@ -33,11 +33,9 @@ func sendEvent(err error, m *tb.Message) {
 	if sentryError != nil {
 		fmt.Println("Couldn't set a sentry DSN")
 	}
-	// Add details about the chat
-	chatUsername := "Chat username: " + m.Chat.Username + "\n"
-	chatTitle := "Chat title: " + m.Chat.Title + "\n"
-	err = errors.New(chatUsername + chatTitle + err.Error())
-	raven.CaptureErrorAndWait(err, nil) // Send it
+	tags := map[string]string{"Chat username: ": m.Chat.Username,
+		"Chat title: ": m.Chat.Title}
+	raven.CaptureErrorAndWait(err, tags) // Send it
 }
 // Handle an error that doesn't have anything to do with the chat, so there is no "m tb.Message" parameter here.
 func handleGeneralError(err error) {
