@@ -121,7 +121,8 @@ func main() {
 					"chat_id":    strconv.FormatInt(m.Chat.ID, 10),
 					"message_id": startIDString,
 				}
-				b.Raw("deleteMessage", params)
+				_ ,err := b.Raw("deleteMessage", params)
+				checkError(err, m)
 				startID++
 			}
 		} else if !bot.CanDeleteMessages {
