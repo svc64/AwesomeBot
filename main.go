@@ -118,11 +118,14 @@ func main() {
 		handleError(err, nil, *m)
 		if sender.CanDeleteMessages ||
 			tb.Creator == sender.Role && bot.CanDeleteMessages {
-				err = b.Purge(m.Chat, m.ReplyTo, m)
+			// The ID grows by 1 every message so we'll use a for loop and add 1 every run
+			for m.ReplyTo.ID <= m.ID {
+				err := b.Delete(m)
 				handleError(err, nil, *m)
-		} else if !bot.CanDeleteMessages && m.Chat.Type != tb.ChatPrivate {
-			_ ,err = b.Reply(m, "I don't have permission to delete messages!")
-			handleError(err, nil, *m)
+				m.ID++
+			}
+		} else if !bot.CanDeleteMessages {
+			b.Reply(m, "I don't have permission to delete messages!")
 		} else if !sender.CanDeleteMessages {
 			err = b.Delete(m)
 			handleError(err, nil, *m)
