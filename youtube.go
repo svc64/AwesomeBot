@@ -10,17 +10,17 @@
 
 package main
 
-import(
+import (
 	"flag"
 	"fmt"
 	"google.golang.org/api/googleapi/transport"
 	"google.golang.org/api/youtube/v3"
-	"os/exec"
+	tb "gopkg.in/tucnak/telebot.v2"
 	"log"
 	"net/http"
 	"net/url"
+	"os/exec"
 	"strings"
-	tb "git.asafniv.me/blzit420/telebot.v2"
 )
 
 func downloadVideo(vidname string) (string, bool) { // the bool returns true if we got the video ID, false if not.

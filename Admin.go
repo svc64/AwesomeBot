@@ -9,7 +9,7 @@
  */
 
 package main
-import 	tb "git.asafniv.me/blzit420/telebot.v2"
+import 	tb "gopkg.in/tucnak/telebot.v2"
 // banUser: bans a user
 // b: the bot
 // sender: the user who called the ban command

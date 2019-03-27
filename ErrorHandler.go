@@ -10,17 +10,18 @@
 
 package main
 import (
+	"errors"
+	"fmt"
 	"github.com/getsentry/raven-go"
 	tb "gopkg.in/tucnak/telebot.v2"
-	"fmt"
-	"errors"
 )
-//  Sentry DSN
-var DSN = "https://e2672e5909514951a621c35fc7818b2d:7b34b4bae174434fa31d356f2d0d446d@sentry.io/1415174"
+
+// DSN is the Sentry DSN
+const DSN string = "https://e2672e5909514951a621c35fc7818b2d:7b34b4bae174434fa31d356f2d0d446d@sentry.io/1415174"
 // This function checks if there are errors and reports them.
 // err = the error
 // m = the message
-func handleError(err error, sendError error, m tb.Message) { // notifyChat = if the bot should sent an error message in the chat **AND FAILED TO**.
+func handleError(err error, sendError error, m tb.Message) {
 	if err != nil {
 		fmt.Println(err)
 		sendEvent(err, m)
