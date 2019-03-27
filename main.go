@@ -113,10 +113,16 @@ func main() {
 		if sender.CanDeleteMessages ||
 			tb.Creator == sender.Role && bot.CanDeleteMessages {
 			// The ID grows by 1 every message so we'll use a for loop and add 1 every run
-			for m.ReplyTo.ID <= m.ID {
-				err := b.Delete(m)
-				checkError(err, m)
-				m.ID++
+			startID := m.ReplyTo.ID
+			endID := m.ID
+			for endID>=startID {
+				startIDString := strconv.Itoa(startID) // convert to string because params is a string map
+				params := map[string]string{
+					"chat_id":    strconv.FormatInt(m.Chat.ID, 10),
+					"message_id": startIDString,
+				}
+				b.Raw("deleteMessage", params)
+				startID++
 			}
 		} else if !bot.CanDeleteMessages {
 			_, err := b.Reply(m, "I don't have permission to delete messages!")
