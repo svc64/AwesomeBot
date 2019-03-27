@@ -29,7 +29,7 @@ func downloadVideo(vidname string) (string, bool) { // the bool returns true if 
 		// Filter vidname to get just the video ID
 		addr := vidname
 		u, err := url.Parse(addr)
-		handleGeneralError(err)
+		checkGeneralError(err)
 		rawQ, _ := url.ParseQuery(u.RawQuery)
 		if rawQ["v"] != nil {
 			vid := rawQ["v"][0]
@@ -53,9 +53,9 @@ func ytdl(vid string) {
 	mkCache := exec.Command("mkdir", ".cache")
 	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "-f", "best[filesize<800M]", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
 	err := mkCache.Run()
-	handleGeneralError(err)
+	checkGeneralError(err)
 	err = dlCmd.Run()
-	handleGeneralError(err)
+	checkGeneralError(err)
 }
 
 // Put your own API key here - this one is restricted to my IP
@@ -76,7 +76,7 @@ func searchVideoID(name string) string {
 		Q(name).
 		MaxResults(1)
 	response, err := call.Do()
-	handleGeneralError(err)
+	checkGeneralError(err)
 	// Group video results in a separate list.
 	videos := make(map[string]string)
 	// Iterate through each item and add it to the correct list.

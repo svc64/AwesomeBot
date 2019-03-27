@@ -37,7 +37,7 @@ func sendEvent(err error, m *tb.Message) {
 	raven.CaptureErrorAndWait(err, tags) // Send it
 }
 // Handle an error that doesn't have anything to do with the chat, so there is no "m tb.Message" parameter here.
-func handleGeneralError(err error) {
+func checkGeneralError(err error) {
 	if err != nil {
 		sentryError := raven.SetDSN(DSN)
 		if sentryError != nil {
