@@ -21,18 +21,14 @@ const DSN string = "https://e2672e5909514951a621c35fc7818b2d:7b34b4bae174434fa31
 // This function checks if there are errors and reports them.
 // err = the error
 // m = the message
-func handleError(err error, sendError error, m tb.Message) {
+func checkError(err error, m *tb.Message) {
 	if err != nil {
 		fmt.Println(err)
 		sendEvent(err, m)
 	}
-	if sendError != nil {
-		fmt.Println(sendError)
-		sendEvent(sendError, m)
-	}
 }
 // Sends an event to sentry
-func sendEvent(err error, m tb.Message) {
+func sendEvent(err error, m *tb.Message) {
 	sentryError := raven.SetDSN(DSN)
 	if sentryError != nil {
 		fmt.Println("Couldn't set a sentry DSN")

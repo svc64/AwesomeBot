@@ -103,11 +103,11 @@ func sendSong(b *tb.Bot, videoID string, m *tb.Message) {
 	if fileExists(filename) {
 		file := &tb.Audio{File: tb.FromDisk(filename)}
 		_ ,err := b.Reply(m, file)
-		handleError(nil, err, *m)
+		checkError(err, m)
 	} else { // song.mp4.aac doesn't exist so we'll try .aac
 		filename = ".cache/" + videoID + ".aac"
 		file := &tb.Audio{File: tb.FromDisk(filename)}
 		_ ,err := b.Reply(m, file)
-		handleError(nil, err, *m)
+		checkError(err, m)
 	}
 }
