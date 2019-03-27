@@ -19,20 +19,20 @@ import 	tb "gopkg.in/tucnak/telebot.v2"
 func banUser(b tb.Bot ,sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, kick bool) {
 	if sender.CanRestrictMembers || // check if the sender is an admin or the group creator.
 		tb.Creator == sender.Role && bot.CanRestrictMembers { // also check if the bot can ban users
-		banUser, err := b.ChatMemberOf(m.Chat, m.ReplyTo.Sender)
+		user, err := b.ChatMemberOf(m.Chat, m.ReplyTo.Sender)
 		checkError(err, m)
-		if banUser.Role == tb.Administrator { // Check if the user is an admin or creator before banning.
+		if user.Role == tb.Administrator { // Check if the user is an admin or creator before banning.
 			_, err := b.Reply(m, "Only the group creator can ban admins")
 			checkError(err ,m)
-		} else if banUser.Role == tb.Creator {
+		} else if user.Role == tb.Creator {
 			_, err := b.Reply(m, "The group creator can't be banned")
 			checkError(err, m)
 		} else {
-			if banUser.User != bot.User { // Prevent the bot from banning itself and silently fail if someone tries to ban the bot.
-				err = b.Ban(m.Chat, banUser)
+			if user.User != bot.User { // Prevent the bot from banning itself and silently fail if someone tries to ban the bot.
+				err = b.Ban(m.Chat, user)
 				checkError(err, m)
 				if err == nil && kick { // if there was no error when banning the user and kick is true, unban them after banning.
-					err = b.Unban(m.Chat, banUser.User)
+					err = b.Unban(m.Chat, user.User)
 					checkError(err, m)
 				}
 			}
