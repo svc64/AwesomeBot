@@ -115,16 +115,7 @@ func main() {
 			// The ID grows by 1 every message so we'll use a for loop and add 1 every run
 			startID := m.ReplyTo.ID
 			endID := m.ID
-			for endID>=startID {
-				startIDString := strconv.Itoa(startID) // convert to string because params is a string map
-				params := map[string]string{
-					"chat_id":    strconv.FormatInt(m.Chat.ID, 10),
-					"message_id": startIDString,
-				}
-				_ ,err := b.Raw("deleteMessage", params)
-				checkError(err, m)
-				startID++
-			}
+			purgeMessages(startID, endID, m, b)
 		} else if !bot.CanDeleteMessages {
 			_, err := b.Reply(m, "I don't have permission to delete messages!")
 			checkError(err, m)

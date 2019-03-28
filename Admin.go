@@ -9,7 +9,11 @@
  */
 
 package main
-import 	tb "gopkg.in/tucnak/telebot.v2"
+
+import (
+	tb "gopkg.in/tucnak/telebot.v2"
+	"strconv"
+)
 // banUser: bans a user
 // b: the bot
 // sender: the user who called the ban command
@@ -43,5 +47,19 @@ func banUser(b tb.Bot ,sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, k
 	} else { // runs when the sender doesn't have permission to ban users
 		_, sendError := b.Reply(m, "You don't have permission to ban users!")
 		checkError(sendError, m)
+	}
+}
+
+// Purge deletes a range of messages
+func purgeMessages(startID int, endID int, m *tb.Message, b *tb.Bot) {
+	for endID>=startID {
+		startIDString := strconv.Itoa(startID) // convert to string because params is a string map
+		params := map[string]string{
+			"chat_id":    strconv.FormatInt(m.Chat.ID, 10),
+			"message_id": startIDString,
+		}
+		_ ,err := b.Raw("deleteMessage", params)
+		checkError(err, m)
+		startID++
 	}
 }
