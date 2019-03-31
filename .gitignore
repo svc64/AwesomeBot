@@ -6,9 +6,11 @@
 .idea
 # The binary
 out
-# The token
-token
+# Build stuff
+config
 # Dep stuff
 vendor
 # Music cache
 .cache
+
+config

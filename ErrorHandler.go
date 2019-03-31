@@ -16,7 +16,7 @@ import (
 )
 
 // DSN is the Sentry DSN
-const DSN string = "https://e2672e5909514951a621c35fc7818b2d:7b34b4bae174434fa31d356f2d0d446d@sentry.io/1415174"
+var DSN string
 // This function checks if there are errors and reports them.
 // err = the error
 // m = the message
