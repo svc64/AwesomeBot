@@ -25,6 +25,7 @@ func main() {
 	})
 	if err != nil {
 		fmt.Println("Failed to set token!")
+		checkError(err, nil)
 		os.Exit(21)
 	}
 	b.Handle("/hello", func(m *tb.Message) {
