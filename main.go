@@ -71,6 +71,7 @@ func main() {
 			// Delete after a minute
 			time.Sleep(time.Minute)
 			err = b.Delete(status)
+			checkError(err, m)
 		}
 	})
 	b.Handle("/pin", func(m *tb.Message) {
