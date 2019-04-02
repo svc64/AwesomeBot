@@ -25,7 +25,7 @@ import (
 
 func downloadVideo(vidname string) (string, bool) { // the bool returns true if we got the video ID, false if not.
 	if strings.HasPrefix(vidname, "http://") ||
-		strings.HasPrefix(vidname, "https://")  {
+		strings.HasPrefix(vidname, "https://") {
 		// Filter vidname to get just the video ID
 		addr := vidname
 		u, err := url.Parse(addr)
@@ -51,7 +51,7 @@ func downloadVideo(vidname string) (string, bool) { // the bool returns true if 
 // vid = video ID
 func ytdl(vid string) {
 	mkCache := exec.Command("mkdir", ".cache")
-	dlCmd := exec.Command("youtube-dl", "https://youtu.be/" + vid, "-x", "-f", "best[filesize<800M]", "--audio-format", "aac", "-o", ".cache/" + vid + ".mp4")
+	dlCmd := exec.Command("youtube-dl", "https://youtu.be/"+vid, "-x", "-f", "best[filesize<800M]", "--audio-format", "aac", "-o", ".cache/"+vid+".mp4")
 	err := mkCache.Run()
 	checkGeneralError(err)
 	err = dlCmd.Run()
@@ -102,12 +102,12 @@ func sendSong(b *tb.Bot, videoID string, m *tb.Message) {
 	so we'll check for that and send a .aac file if it exists. */
 	if fileExists(filename) {
 		file := &tb.Audio{File: tb.FromDisk(filename)}
-		_ ,err := b.Reply(m, file)
+		_, err := b.Reply(m, file)
 		checkError(err, m)
 	} else { // song.mp4.aac doesn't exist so we'll try .aac
 		filename = ".cache/" + videoID + ".aac"
 		file := &tb.Audio{File: tb.FromDisk(filename)}
-		_ ,err := b.Reply(m, file)
+		_, err := b.Reply(m, file)
 		checkError(err, m)
 	}
 }

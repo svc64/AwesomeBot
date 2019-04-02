@@ -9,6 +9,7 @@
  */
 
 package main
+
 import (
 	"fmt"
 	"github.com/getsentry/raven-go"
@@ -17,6 +18,7 @@ import (
 
 // DSN is the Sentry DSN
 var DSN string
+
 // This function checks if there are errors and reports them.
 // err = the error
 // m = the message
@@ -26,6 +28,7 @@ func checkError(err error, m *tb.Message) {
 		sendEvent(err, m)
 	}
 }
+
 // Sends an event to sentry
 func sendEvent(err error, m *tb.Message) {
 	sentryError := raven.SetDSN(DSN)
@@ -36,6 +39,7 @@ func sendEvent(err error, m *tb.Message) {
 		"Chat title: ": m.Chat.Title}
 	raven.CaptureErrorAndWait(err, tags) // Send it
 }
+
 // Handle an error that doesn't have anything to do with the chat, so there is no "m tb.Message" parameter here.
 func checkGeneralError(err error) {
 	if err != nil {

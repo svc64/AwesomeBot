@@ -14,20 +14,21 @@ import (
 	tb "gopkg.in/tucnak/telebot.v2"
 	"strconv"
 )
+
 // banUser: bans a user
 // b: the bot
 // sender: the user who called the ban command
 // bot: the bot as a ChatMember
 // m: the message that called the command
 // kick: should we kick the user and not ban them? if kick is true, we'll unban the user right after kicking them
-func banUser(b tb.Bot ,sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, kick bool) {
+func banUser(b tb.Bot, sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, kick bool) {
 	if sender.CanRestrictMembers || // check if the sender is an admin or the group creator.
 		tb.Creator == sender.Role && bot.CanRestrictMembers { // also check if the bot can ban users
 		user, err := b.ChatMemberOf(m.Chat, m.ReplyTo.Sender)
 		checkError(err, m)
 		if user.Role == tb.Administrator { // Check if the user is an admin or creator before banning.
 			_, err := b.Reply(m, "Only the group creator can ban admins")
-			checkError(err ,m)
+			checkError(err, m)
 		} else if user.Role == tb.Creator {
 			_, err := b.Reply(m, "The group creator can't be banned")
 			checkError(err, m)
@@ -52,13 +53,13 @@ func banUser(b tb.Bot ,sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, k
 
 // Purge deletes a range of messages
 func purgeMessages(startID int, endID int, m *tb.Message, b *tb.Bot) {
-	for endID>=startID {
+	for endID >= startID {
 		startIDString := strconv.Itoa(startID) // convert to string because params is a string map
 		params := map[string]string{
 			"chat_id":    strconv.FormatInt(m.Chat.ID, 10),
 			"message_id": startIDString,
 		}
-		_ ,err := b.Raw("deleteMessage", params)
+		_, err := b.Raw("deleteMessage", params)
 		checkError(err, m)
 		startID++
 	}

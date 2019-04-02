@@ -9,6 +9,7 @@
  */
 
 package main
+
 import (
 	"fmt"
 	tb "gopkg.in/tucnak/telebot.v2"
@@ -16,6 +17,7 @@ import (
 	"strconv"
 	"time"
 )
+
 var token string // should be provided at build time
 func main() {
 	b, err := tb.NewBot(tb.Settings{
@@ -56,15 +58,15 @@ func main() {
 	})
 	b.Handle("/song", func(m *tb.Message) {
 		// notify the user
-		status ,err := b.Reply(m, "Downloading song...")
+		status, err := b.Reply(m, "Downloading song...")
 		checkError(err, m)
-		videoID, succeeded := downloadVideo(m.Payload)  // It also downloads the video and returns the ID
+		videoID, succeeded := downloadVideo(m.Payload) // It also downloads the video and returns the ID
 		err = b.Delete(status)
 		checkError(err, m)
 		if succeeded { // if it succeeded, send the file from disk
 			sendSong(b, videoID, m)
 		} else {
-			status ,err = b.Reply(m, "Download failed!")
+			status, err = b.Reply(m, "Download failed!")
 			checkError(err, m)
 			// Delete after a minute
 			time.Sleep(time.Minute)
@@ -84,12 +86,12 @@ func main() {
 		if m.IsReply() { // if it's a reply we should get the ID of the user that the sender replied to
 			id := strconv.Itoa(m.ReplyTo.Sender.ID) // convert an int to string
 			msg := "User ID: " + id
-			_ ,err = b.Send(m.Chat, msg)
+			_, err = b.Send(m.Chat, msg)
 			checkError(err, m)
 		} else {
 			id := strconv.Itoa(m.Sender.ID)
 			msg := "Your ID: " + id
-			_ ,err = b.Send(m.Chat, msg)
+			_, err = b.Send(m.Chat, msg)
 			checkError(err, m)
 		}
 	})
@@ -98,10 +100,10 @@ func main() {
 		if m.IsReply() {
 			id := strconv.Itoa(m.ReplyTo.ID)
 			msg := "Message ID: " + id
-			_ ,err = b.Reply(m, msg)
+			_, err = b.Reply(m, msg)
 			checkError(err, m)
 		} else {
-			_ ,err = b.Reply(m, "Reply to a message with this command to get it's ID")
+			_, err = b.Reply(m, "Reply to a message with this command to get it's ID")
 			checkError(err, m)
 		}
 	})
@@ -132,12 +134,12 @@ func main() {
 		checkError(err, m)
 		if sender.CanDeleteMessages ||
 			tb.Creator == sender.Role && bot.CanDeleteMessages {
-				err = b.Delete(m.ReplyTo)
-				checkError(err, m)
-				err = b.Delete(m)
-				checkError(err, m)
+			err = b.Delete(m.ReplyTo)
+			checkError(err, m)
+			err = b.Delete(m)
+			checkError(err, m)
 		} else if !bot.CanDeleteMessages && m.Chat.Type != tb.ChatPrivate {
-			_ ,err = b.Reply(m, "I don't have permission to delete messages!")
+			_, err = b.Reply(m, "I don't have permission to delete messages!")
 			checkError(err, m)
 		} else if !sender.CanDeleteMessages && m.Chat.Type != tb.ChatPrivate && m.Sender != m.ReplyTo.Sender { // if the sender can't delete messages we'll delete their command
 			err = b.Delete(m)
