@@ -64,3 +64,38 @@ func purgeMessages(startID int, endID int, m *tb.Message, b *tb.Bot) {
 		startID++
 	}
 }
+
+// handle /erase
+func handleErase(b *tb.Bot) {
+	b.Handle("/delete", func(m *tb.Message) {
+		if canDeleteMessages(m.Chat, m.Sender, b) {
+			endID := m.ReplyTo.ID
+			startID := m.ID
+			for endID <= startID {
+				startIDString := strconv.Itoa(startID) // convert to string because params is a string map
+				params := map[string]string{
+					"chat_id":    strconv.FormatInt(m.Chat.ID, 10),
+					"message_id": startIDString,
+				}
+				_, err := b.Raw("deleteMessage", params)
+				checkError(err, m)
+				startID--
+			}
+		}
+	})
+}
+
+// canDeleteMessages checks if a user can delete messages
+func canDeleteMessages(chat *tb.Chat, user *tb.User, b *tb.Bot) bool {
+	member, err := b.ChatMemberOf(chat, user)
+	checkGeneralError(err)
+	if err != nil {
+		return false
+	}
+	if member.CanDeleteMessages ||
+		tb.Creator == member.Role {
+		return true
+	} else {
+		return false
+	}
+}
