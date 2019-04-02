@@ -67,7 +67,7 @@ func purgeMessages(startID int, endID int, m *tb.Message, b *tb.Bot) {
 
 // handle /erase
 func handleErase(b *tb.Bot) {
-	b.Handle("/delete", func(m *tb.Message) {
+	b.Handle("/erase", func(m *tb.Message) {
 		if canDeleteMessages(m.Chat, m.Sender, b) {
 			endID := m.ReplyTo.ID
 			startID := m.ID
