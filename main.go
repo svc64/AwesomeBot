@@ -157,6 +157,5 @@ func main() {
 			checkError(err, m)
 		}
 	})
-	handleErase(b)
 	b.Start()
 }
