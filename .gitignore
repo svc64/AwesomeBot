@@ -12,5 +12,5 @@ config
 vendor
 # Music cache
 .cache
-
 config
+build
