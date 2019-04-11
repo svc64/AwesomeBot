@@ -13,6 +13,7 @@ package main
 import (
 	tb "gopkg.in/tucnak/telebot.v2"
 	"strconv"
+	"time"
 )
 
 // banUser: bans a user
@@ -53,7 +54,9 @@ func banUser(b tb.Bot, sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, k
 
 // Purge deletes a range of messages
 func purgeMessages(startID int, endID int, m *tb.Message, b *tb.Bot) {
+	limiter := time.Tick(200 * time.Millisecond) // a 200ms rate limit
 	for endID >= startID {
+		<-limiter
 		startIDString := strconv.Itoa(startID) // convert to string because params is a string map
 		params := map[string]string{
 			"chat_id":    strconv.FormatInt(m.Chat.ID, 10),
@@ -63,4 +66,5 @@ func purgeMessages(startID int, endID int, m *tb.Message, b *tb.Bot) {
 		checkError(err, m)
 		startID++
 	}
+
 }
