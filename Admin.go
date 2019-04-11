@@ -66,5 +66,4 @@ func purgeMessages(startID int, endID int, m *tb.Message, b *tb.Bot) {
 		checkError(err, m)
 		startID++
 	}
-
 }
