@@ -25,16 +25,14 @@ func handleBlacklist(b *tb.Bot) {
 	lines := len(words)
 	if status == true {
 		b.Handle(tb.OnText, func(m *tb.Message) {
+			var i int
 			bot, err := b.ChatMemberOf(m.Chat, b.Me)
 			checkError(err, m)
-			var i int
 			for i <= lines {
 				if strings.ContainsAny(m.Text, words[i]) && bot.CanDeleteMessages {
 					err = b.Delete(m)
 					checkError(err, m)
-					break
 				}
-				i++
 			}
 		})
 	}
