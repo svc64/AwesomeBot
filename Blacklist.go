@@ -12,7 +12,6 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	tb "gopkg.in/tucnak/telebot.v2"
 	"io/ioutil"
 	"strings"
