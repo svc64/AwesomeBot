@@ -13,19 +13,19 @@ package main
 import "os"
 
 var homeDir, _ = os.UserHomeDir()
-var configDir = homeDir + ".config/"
+var configDir = homeDir + "/.config/"
 var awesomeConfig = configDir + "AwesomeBot"
 
 // checkConfig checks if the configuration folder exists.
 func checkConfig() {
 	// check if configDir exists
 	if !fileExists(configDir) {
-		err := os.Mkdir(configDir, 755)
+		err := os.Mkdir(configDir, 0700)
 		checkGeneralError(err)
 	}
 	// check if awesomeConfig exists
 	if !fileExists(awesomeConfig) {
-		err := os.Mkdir(awesomeConfig, 755)
+		err := os.Mkdir(awesomeConfig, 0700)
 		checkGeneralError(err)
 	}
 }
