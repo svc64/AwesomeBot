@@ -20,6 +20,7 @@ import (
 
 var token string // should be provided at build time
 func main() {
+	checkConfig()
 	b, err := tb.NewBot(tb.Settings{
 		Token:  token,
 		URL:    "",
@@ -157,5 +158,6 @@ func main() {
 			checkError(err, m)
 		}
 	})
+	handleBlacklist(b)
 	b.Start()
 }
