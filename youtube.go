@@ -96,18 +96,20 @@ func getID(matches map[string]string) string {
 	return ""
 }
 
-func sendSong(b *tb.Bot, videoID string, m *tb.Message) {
+func sendSong(b *tb.Bot, videoID string, m *tb.Message) (*tb.Message, error) {
 	filename := ".cache/" + videoID + ".mp4.aac"
 	/* Some songs are getting an ".mp4.aac" file extension and some don't
 	so we'll check for that and send a .aac file if it exists. */
 	if fileExists(filename) {
 		file := &tb.Audio{File: tb.FromDisk(filename)}
-		_, err := b.Reply(m, file)
+		m, err := b.Reply(m, file)
 		checkError(err, m)
+		return m, err
 	} else { // song.mp4.aac doesn't exist so we'll try .aac
 		filename = ".cache/" + videoID + ".aac"
 		file := &tb.Audio{File: tb.FromDisk(filename)}
-		_, err := b.Reply(m, file)
+		m, err := b.Reply(m, file)
 		checkError(err, m)
+		return m, err
 	}
 }

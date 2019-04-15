@@ -65,7 +65,15 @@ func main() {
 		err = b.Delete(status)
 		checkError(err, m)
 		if succeeded { // if it succeeded, send the file from disk
-			sendSong(b, videoID, m)
+			song, err := sendSong(b, videoID, m)
+			if err != nil {
+				_, err := b.Reply(m, "Error sending file, it's probably too big")
+				checkError(err, m)
+			} else { // Delete the song after 6 hours
+				time.Sleep(6 * time.Hour)
+				err = b.Delete(song)
+				checkError(err, m)
+			}
 		} else {
 			status, err = b.Reply(m, "Download failed!")
 			checkError(err, m)
