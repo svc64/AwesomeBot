@@ -23,23 +23,23 @@ var blacklistFolder = awesomeConfig + "/blacklists/"
 
 // handle a word blacklist
 func handleBlacklist(b *tb.Bot) {
-		b.Handle(tb.OnText, func(m *tb.Message) {
-			words, status := readBlacklist(m.Chat.ID)
-			if status { // status tells us if the chat has a blacklist or not
-				lines := len(words)
-				bot, err := b.ChatMemberOf(m.Chat, b.Me)
-				checkError(err, m)
-				var i int
-				for i <= lines {
-					if strings.ContainsAny(m.Text, words[i]) && bot.CanDeleteMessages {
-						err = b.Delete(m)
-						checkError(err, m)
-						break
-					}
-					i++
+	b.Handle(tb.OnText, func(m *tb.Message) {
+		words, status := readBlacklist(m.Chat.ID)
+		if status { // status tells us if the chat has a blacklist or not
+			lines := len(words)
+			bot, err := b.ChatMemberOf(m.Chat, b.Me)
+			checkError(err, m)
+			var i int
+			for i <= lines {
+				if strings.ContainsAny(m.Text, words[i]) && bot.CanDeleteMessages {
+					err = b.Delete(m)
+					checkError(err, m)
+					break
 				}
+				i++
 			}
-		})
+		}
+	})
 }
 
 // read the blacklist file
@@ -49,7 +49,8 @@ func readBlacklist(chatID64 int64) ([]string, bool) { // chatID64 is the chat ID
 		err := os.Mkdir(blacklistFolder, 0700)
 		checkGeneralError(err)
 	}
-	chatID := strconv.FormatInt(chatID64, 10) // convert int64 to string
+	// convert int64 to string
+	chatID := strconv.FormatInt(chatID64, 10)
 	fileContents, err := ioutil.ReadFile(blacklistFolder + chatID) // there's a file for every blacklist
 	if err != nil {
 		// this error doesn't need to be reported
