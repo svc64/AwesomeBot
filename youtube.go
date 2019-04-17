@@ -19,6 +19,7 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"os"
 	"os/exec"
 	"strings"
 )
@@ -50,9 +51,11 @@ func downloadVideo(vidname string) (string, bool) { // the bool returns true if 
 
 // vid = video ID
 func ytdl(vid string) {
-	mkCache := exec.Command("mkdir", ".cache")
+	homeDir, err := os.UserHomeDir()
+	checkGeneralError(err)
+	mkCache := exec.Command("mkdir", homeDir+"/.cache")
 	dlCmd := exec.Command("youtube-dl", "https://youtu.be/"+vid, "-x", "-f", "best[filesize<800M]", "--audio-format", "aac", "-o", ".cache/"+vid+".mp4")
-	err := mkCache.Run()
+	err = mkCache.Run()
 	checkGeneralError(err)
 	err = dlCmd.Run()
 	checkGeneralError(err)
