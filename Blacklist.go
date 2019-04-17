@@ -14,51 +14,54 @@ import (
 	"bufio"
 	tb "gopkg.in/tucnak/telebot.v2"
 	"io/ioutil"
+	"os"
+	"strconv"
 	"strings"
 )
 
-var listFile = awesomeConfig + "/blacklist"
+var blacklistFolder = awesomeConfig + "/blacklists/"
 
 // handle a word blacklist
 func handleBlacklist(b *tb.Bot) {
-	words, status := readBlacklist()
-	lines := len(words)
-	if status == true {
 		b.Handle(tb.OnText, func(m *tb.Message) {
-			bot, err := b.ChatMemberOf(m.Chat, b.Me)
-			checkError(err, m)
-			var i int
-			for i <= lines {
-				if strings.ContainsAny(m.Text, words[i]) && bot.CanDeleteMessages {
-					err = b.Delete(m)
-					checkError(err, m)
-					break
+			words, status := readBlacklist(m.Chat.ID)
+			if status { // status tells us if the chat has a blacklist or not
+				lines := len(words)
+				bot, err := b.ChatMemberOf(m.Chat, b.Me)
+				checkError(err, m)
+				var i int
+				for i <= lines {
+					if strings.ContainsAny(m.Text, words[i]) && bot.CanDeleteMessages {
+						err = b.Delete(m)
+						checkError(err, m)
+						break
+					}
+					i++
 				}
-				i++
 			}
 		})
-	}
 }
 
 // read the blacklist file
 // this function returns a string that contains the file's contents and a bool to check errors
-func readBlacklist() ([]string, bool) {
-	if fileExists(listFile) {
-		fileContents, err := ioutil.ReadFile(listFile)
-		if err != nil {
-			checkGeneralError(err)
-			return nil, false
-		}
-		list := string(fileContents)
-		scanner := bufio.NewScanner(strings.NewReader(list))
-		var words []string
-		for scanner.Scan() { // count the number of lines in the config file and append them to the words array
-			words = append(words, scanner.Text())
-		}
-		for scanner.Scan() {
-		}
-		return words, true
-	} else {
+func readBlacklist(chatID64 int64) ([]string, bool) { // chatID64 is the chat ID in int64
+	if !fileExists(blacklistFolder) {
+		err := os.Mkdir(blacklistFolder, 0700)
+		checkGeneralError(err)
+	}
+	chatID := strconv.FormatInt(chatID64, 10) // convert int64 to string
+	fileContents, err := ioutil.ReadFile(blacklistFolder + chatID) // there's a file for every blacklist
+	if err != nil {
+		// this error doesn't need to be reported
 		return nil, false
 	}
+	list := string(fileContents)
+	scanner := bufio.NewScanner(strings.NewReader(list))
+	var words []string
+	for scanner.Scan() { // count the number of lines in the config file and append them to the words array
+		words = append(words, scanner.Text())
+	}
+	for scanner.Scan() {
+	}
+	return words, true
 }
