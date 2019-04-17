@@ -103,6 +103,11 @@ func handleCommands(b *tb.Bot) {
 			checkError(err, m)
 		}
 	})
+	b.Handle("/cid", func(m *tb.Message) {
+		chatID := strconv.FormatInt(m.Chat.ID, 10)
+		_, err := b.Send(m.Sender, "Chat ID: "+chatID)
+		checkError(err, m)
+	})
 	// purge: delete every message since m.ReplyTo
 	b.Handle("/purge", func(m *tb.Message) {
 		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
