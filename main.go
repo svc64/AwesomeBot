@@ -21,7 +21,6 @@ var token string // should be provided at build time
 func main() {
 	b, err := tb.NewBot(tb.Settings{
 		Token:  token,
-		URL:    "",
 		Poller: &tb.LongPoller{Timeout: 10 * time.Second},
 	})
 	if err != nil {
