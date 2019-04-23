@@ -30,6 +30,5 @@ func main() {
 		os.Exit(21)
 	}
 	handleCommands(b)
-	handleBlacklist(b)
 	b.Start()
 }
