@@ -29,6 +29,7 @@ func main() {
 		checkError(err, nil)
 		os.Exit(21)
 	}
-	handleCommands(b)
+	helpMessage := readHelpMessage() // We're not reading this every time someone calls an help command.
+	handleCommands(b, helpMessage)
 	b.Start()
 }

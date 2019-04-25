@@ -16,7 +16,7 @@ import (
 	"time"
 )
 
-func handleCommands(b *tb.Bot) {
+func handleCommands(b *tb.Bot, helpMessage string) {
 	b.Handle("/hello", func(m *tb.Message) {
 		_, err := b.Send(m.Sender, "HI THERE")
 		checkError(err, m)
@@ -156,5 +156,11 @@ func handleCommands(b *tb.Bot) {
 			err = b.Delete(m)
 			checkError(err, m)
 		}
+	})
+	b.Handle("/start", func(m *tb.Message) {
+		sendHelpMessage(b, m, helpMessage)
+	})
+	b.Handle("/help", func(m *tb.Message) {
+		sendHelpMessage(b, m, helpMessage)
 	})
 }
