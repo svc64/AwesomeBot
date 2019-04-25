@@ -14,7 +14,9 @@ import (
 	tb "gopkg.in/tucnak/telebot.v2"
 	"io/ioutil"
 )
+
 var helpMessageFile = "helpmsg"
+
 func sendHelpMessage(b *tb.Bot, m *tb.Message, helpMessage string) {
 	// Check if the chat is private and the help message isn't empty
 	if m.Chat.Type == tb.ChatPrivate && helpMessage != "" {
@@ -22,6 +24,7 @@ func sendHelpMessage(b *tb.Bot, m *tb.Message, helpMessage string) {
 		checkError(err, m)
 	}
 }
+
 // We're reading that file only once, no need to torture my disk.
 func readHelpMessage() string {
 	file, err := ioutil.ReadFile(awesomeConfig + "/" + helpMessageFile)
