@@ -19,6 +19,7 @@ import (
 
 var token string // should be provided at build time
 func main() {
+	checkConfig()
 	b, err := tb.NewBot(tb.Settings{
 		Token:  token,
 		Poller: &tb.LongPoller{Timeout: 10 * time.Second},
