@@ -1,3 +1,5 @@
 # Copy this file to a file named "config"
 export TOKEN="YOUR_TOKEN_HERE"
 export SENTRY="YOUR_DSN"
+# YouTube API Key
+export YOUTUBE_API=""

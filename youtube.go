@@ -61,14 +61,10 @@ func ytdl(vid string) {
 	checkGeneralError(err)
 }
 
-// Put your own API key here - this one is restricted to my IP
-// If you want a key that doesn't identify you, you can probably get one by decompiling apps and copying the key.
-const developerKey = "AIzaSyAcJAjE4cvQsuHfJmE-EVTK5C88DUiPHIg"
-
 func searchVideoID(name string) string {
 	flag.Parse()
 	client := &http.Client{
-		Transport: &transport.APIKey{Key: developerKey},
+		Transport: &transport.APIKey{Key: youtubeAPIKey},
 	}
 	service, err := youtube.New(client)
 	if err != nil {
