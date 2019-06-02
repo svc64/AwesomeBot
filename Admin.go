@@ -25,7 +25,7 @@ import (
 func banUser(b tb.Bot, sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, kick bool) {
 	if sender.CanRestrictMembers || // check if the sender is an admin or the group creator.
 		tb.Creator == sender.Role && bot.CanRestrictMembers { // also check if the bot can ban users
-		user, err := b.ChatMemberOf(m.Chat, m.ReplyTo.Sender)
+		user, err := b.ChatMemberOf(m.Chat, m.ReplyTo.OriginalSender)
 		checkError(err, m)
 		if user.Role == tb.Administrator { // Check if the user is an admin or creator before banning.
 			_, err := b.Reply(m, "Only the group creator can ban admins")
