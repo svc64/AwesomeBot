@@ -32,5 +32,6 @@ func main() {
 	}
 	helpMessage := readHelpMessage() // We're not reading this every time someone calls an help command.
 	handleCommands(b, helpMessage)
+	DBWatch(b)
 	b.Start()
 }
