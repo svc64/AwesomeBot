@@ -13,6 +13,7 @@ package main
 import (
 	tb "gopkg.in/tucnak/telebot.v2"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -34,7 +35,21 @@ func banUser(b tb.Bot, sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, k
 			_, err := b.Reply(m, "The group creator can't be banned")
 			checkError(err, m)
 		} else {
-			if user.User != bot.User { // Prevent the bot from banning itself and silently fail if someone tries to ban the bot.
+			if user.User != bot.User { // Prevent the bot from banning itself and silently fail if someone tries to ban the bot
+				if strings.HasPrefix(m.Payload, "@") {
+					username := strings.TrimPrefix(m.Payload, "@")
+					userDetails := getUserByName(username)
+					UserID, err := strconv.Atoi(userDetails.UID)
+					if err != nil {
+						panic("The database is corrupted: " + userDetails.UID)
+					}
+					spoofUser := tb.User{
+						ID: UserID,
+					}
+					toBan, err := b.ChatMemberOf(m.Chat, &spoofUser)
+					err = b.Ban(m.Chat, toBan)
+					checkError(err, m)
+				}
 				err = b.Ban(m.Chat, user)
 				checkError(err, m)
 				if err == nil && kick { // if there was no error when banning the user and kick is true, unban them after banning.

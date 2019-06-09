@@ -19,6 +19,7 @@ import (
 
 var token string // should be provided at build time
 var youtubeAPIKey string
+
 func main() {
 	checkConfig()
 	b, err := tb.NewBot(tb.Settings{
