@@ -11,6 +11,7 @@
 package main
 
 import (
+	"fmt"
 	tb "gopkg.in/tucnak/telebot.v2"
 	"strconv"
 	"strings"
@@ -26,7 +27,25 @@ import (
 func banUser(b tb.Bot, sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, kick bool) {
 	if sender.CanRestrictMembers || // check if the sender is an admin or the group creator.
 		tb.Creator == sender.Role && bot.CanRestrictMembers { // also check if the bot can ban users
-		user, err := b.ChatMemberOf(m.Chat, m.ReplyTo.OriginalSender)
+		var user *tb.ChatMember
+		var err error
+		if m.IsReply() {
+			user, err = b.ChatMemberOf(m.Chat, m.ReplyTo.OriginalSender)
+			checkError(err, m)
+		} else if strings.HasPrefix(m.Payload, "@") {
+			username := strings.TrimPrefix(m.Payload, "@")
+			fmt.Println("Payload: " + m.Payload)
+			userDetails := getUserByName(username)
+			UserID, err := strconv.Atoi(userDetails.UID)
+			if err != nil {
+				panic("The database is corrupted: " + userDetails.UID)
+			}
+			spoofUser := tb.User{
+				ID: UserID,
+				Username: userDetails.Username,
+			}
+			user, err = b.ChatMemberOf(m.Chat, &spoofUser)
+		}
 		checkError(err, m)
 		if user.Role == tb.Administrator { // Check if the user is an admin or creator before banning.
 			_, err := b.Reply(m, "Only the group creator can ban admins")
@@ -36,20 +55,6 @@ func banUser(b tb.Bot, sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, k
 			checkError(err, m)
 		} else {
 			if user.User != bot.User { // Prevent the bot from banning itself and silently fail if someone tries to ban the bot
-				if strings.HasPrefix(m.Payload, "@") {
-					username := strings.TrimPrefix(m.Payload, "@")
-					userDetails := getUserByName(username)
-					UserID, err := strconv.Atoi(userDetails.UID)
-					if err != nil {
-						panic("The database is corrupted: " + userDetails.UID)
-					}
-					spoofUser := tb.User{
-						ID: UserID,
-					}
-					toBan, err := b.ChatMemberOf(m.Chat, &spoofUser)
-					err = b.Ban(m.Chat, toBan)
-					checkError(err, m)
-				}
 				err = b.Ban(m.Chat, user)
 				checkError(err, m)
 				if err == nil && kick { // if there was no error when banning the user and kick is true, unban them after banning.
