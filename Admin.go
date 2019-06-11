@@ -67,3 +67,12 @@ func purgeMessages(startID int, endID int, m *tb.Message, b *tb.Bot) {
 		startID++
 	}
 }
+
+// Kick or ban a user
+func kickOrBan(b *tb.Bot, m *tb.Message, kick bool) {
+	sender, err := b.ChatMemberOf(m.Chat, m.Sender)
+	checkError(err, m)
+	bot, err := b.ChatMemberOf(m.Chat, b.Me)
+	checkError(err, m)
+	banUser(*b, *sender, *bot, m, kick)
+}

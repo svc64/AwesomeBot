@@ -29,19 +29,11 @@ func handleCommands(b *tb.Bot, helpMessage string) {
 	})
 	// handle bans
 	b.Handle("/ban", func(m *tb.Message) {
-		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
-		checkError(err, m)
-		bot, err := b.ChatMemberOf(m.Chat, b.Me)
-		checkError(err, m)
-		banUser(*b, *sender, *bot, m, false)
+		kickOrBan(b, m, false)
 	})
 	// kick: remove user without banning
 	b.Handle("/kick", func(m *tb.Message) {
-		sender, err := b.ChatMemberOf(m.Chat, m.Sender)
-		checkError(err, m)
-		bot, err := b.ChatMemberOf(m.Chat, b.Me)
-		checkError(err, m)
-		banUser(*b, *sender, *bot, m, true)
+		kickOrBan(b, m, true)
 	})
 	b.Handle("/song", func(m *tb.Message) {
 		// notify the user
