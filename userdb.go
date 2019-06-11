@@ -49,7 +49,7 @@ func DBTrigger(TGUser *tb.User) {
 		addUser(TGUser)
 	}
 }
-func DBWatch(b *tb.Bot) {
+func DBWatch() {
 	b.Handle(tb.OnText, func(m *tb.Message) {
 		DBTrigger(m.Sender)
 		if m.IsForwarded() {

@@ -41,7 +41,7 @@ func banUser(b tb.Bot, sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, k
 				panic("The database is corrupted: " + userDetails.UID)
 			}
 			spoofUser := tb.User{
-				ID: UserID,
+				ID:       UserID,
 				Username: userDetails.Username,
 			}
 			user, err = b.ChatMemberOf(m.Chat, &spoofUser)
@@ -73,7 +73,7 @@ func banUser(b tb.Bot, sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, k
 }
 
 // Purge deletes a range of messages
-func purgeMessages(startID int, endID int, m *tb.Message, b *tb.Bot) {
+func purgeMessages(startID int, endID int, m *tb.Message) {
 	limiter := time.Tick(200 * time.Millisecond) // a 200ms rate limit
 	for endID >= startID {
 		<-limiter
@@ -89,7 +89,7 @@ func purgeMessages(startID int, endID int, m *tb.Message, b *tb.Bot) {
 }
 
 // Kick or ban a user
-func kickOrBan(b *tb.Bot, m *tb.Message, kick bool) {
+func kickOrBan(m *tb.Message, kick bool) {
 	sender, err := b.ChatMemberOf(m.Chat, m.Sender)
 	checkError(err, m)
 	bot, err := b.ChatMemberOf(m.Chat, b.Me)

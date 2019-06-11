@@ -16,7 +16,7 @@ import (
 	"time"
 )
 
-func handleCommands(b *tb.Bot, helpMessage string) {
+func handleCommands() {
 	b.Handle("/hello", func(m *tb.Message) {
 		_, err := b.Send(m.Sender, "HI THERE")
 		checkError(err, m)
@@ -29,11 +29,11 @@ func handleCommands(b *tb.Bot, helpMessage string) {
 	})
 	// handle bans
 	b.Handle("/ban", func(m *tb.Message) {
-		kickOrBan(b, m, false)
+		kickOrBan(m, false)
 	})
 	// kick: remove user without banning
 	b.Handle("/kick", func(m *tb.Message) {
-		kickOrBan(b, m, true)
+		kickOrBan(m, true)
 	})
 	b.Handle("/song", func(m *tb.Message) {
 		// notify the user
@@ -111,7 +111,7 @@ func handleCommands(b *tb.Bot, helpMessage string) {
 			// The ID grows by 1 every message so we'll use a for loop and add 1 every run
 			startID := m.ReplyTo.ID
 			endID := m.ID
-			purgeMessages(startID, endID, m, b)
+			purgeMessages(startID, endID, m)
 		} else if !bot.CanDeleteMessages {
 			_, err = b.Reply(m, "I don't have permission to delete messages!")
 			checkError(err, m)
@@ -150,9 +150,9 @@ func handleCommands(b *tb.Bot, helpMessage string) {
 		}
 	})
 	b.Handle("/start", func(m *tb.Message) {
-		sendHelpMessage(b, m, helpMessage)
+		sendHelpMessage(m)
 	})
 	b.Handle("/help", func(m *tb.Message) {
-		sendHelpMessage(b, m, helpMessage)
+		sendHelpMessage(m)
 	})
 }

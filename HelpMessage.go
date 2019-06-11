@@ -17,7 +17,7 @@ import (
 
 var helpMessageFile = "helpmsg"
 
-func sendHelpMessage(b *tb.Bot, m *tb.Message, helpMessage string) {
+func sendHelpMessage(m *tb.Message) {
 	// Check if the chat is private and the help message isn't empty
 	if m.Chat.Type == tb.ChatPrivate && helpMessage != "" {
 		_, err := b.Send(m.Sender, helpMessage, tb.ModeMarkdown) // The help message is formatted in markdown

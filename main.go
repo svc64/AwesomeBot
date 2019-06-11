@@ -13,26 +13,25 @@ package main
 import (
 	"fmt"
 	tb "gopkg.in/tucnak/telebot.v2"
-	"os"
 	"time"
 )
 
 var token string // should be provided at build time
 var youtubeAPIKey string
-
+var b *tb.Bot
+var BotError error
+var helpMessage = readHelpMessage() // We're not reading this every time someone calls an help command.
 func main() {
 	checkConfig()
-	b, err := tb.NewBot(tb.Settings{
+	b, BotError = tb.NewBot(tb.Settings{
 		Token:  token,
 		Poller: &tb.LongPoller{Timeout: 10 * time.Second},
 	})
-	if err != nil {
+	if BotError != nil {
 		fmt.Println("Failed to set token!")
-		checkError(err, nil)
-		os.Exit(21)
+		checkGeneralError(BotError)
 	}
-	helpMessage := readHelpMessage() // We're not reading this every time someone calls an help command.
-	handleCommands(b, helpMessage)
-	DBWatch(b)
+	handleCommands()
+	DBWatch()
 	b.Start()
 }
