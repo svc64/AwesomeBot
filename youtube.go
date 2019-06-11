@@ -50,6 +50,7 @@ func downloadVideo(vidname string) (string, bool) { // the bool returns true if 
 }
 
 // vid = video ID
+// TODO: Be pirates and rip from deezer
 func ytdl(vid string) {
 	homeDir, err := os.UserHomeDir()
 	checkGeneralError(err)
