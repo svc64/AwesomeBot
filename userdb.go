@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/sonyarouje/simdb/db"
 	tb "gopkg.in/tucnak/telebot.v2"
+	"os"
 	"strconv"
 )
 
@@ -12,6 +13,7 @@ type User struct {
 	Username string `json:"username"`
 }
 
+var databaseDir = awesomeConfig + "/Database"
 var driver = getDB()
 
 //ID any struct that needs to persist should implement this function defined
@@ -22,7 +24,13 @@ func (User User) ID() (jsonField string, value interface{}) {
 	return
 }
 func getDB() *db.Driver {
-	driver, err := db.New(awesomeConfig + "/Database")
+	if !fileExists(databaseDir) {
+		err := os.Mkdir(databaseDir, 0700)
+		if err != nil {
+			panic(err)
+		}
+	}
+	driver, err := db.New(databaseDir)
 	if err != nil {
 		panic(err)
 	}

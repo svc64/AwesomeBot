@@ -10,10 +10,13 @@
 
 package main
 
-import "os"
+import (
+	"os"
+	"runtime"
+)
 
 var homeDir, _ = os.UserHomeDir()
-var configDir = homeDir + "/.config/"
+var configDir = setConfigDir()
 var awesomeConfig = configDir + "AwesomeBot"
 
 // checkConfig checks if the configuration folder exists.
@@ -27,5 +30,17 @@ func checkConfig() {
 	if !fileExists(awesomeConfig) {
 		err := os.Mkdir(awesomeConfig, 0700)
 		checkGeneralError(err)
+	}
+}
+
+// Set the configuration directory based on which OS the user is running
+func setConfigDir() string {
+	switch runtime.GOOS {
+	case "darwin":
+		return homeDir + "/Library/"
+	case "windows":
+		return homeDir // (it should just make an AwesomeBot directory) I have no idea if that's going to work but whatever, Windows isn't worth my time.
+	default:
+		return homeDir + "/.config/" // Linux, FreeBSD and all the others
 	}
 }
