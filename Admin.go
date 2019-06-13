@@ -30,7 +30,7 @@ func banUser(b tb.Bot, sender tb.ChatMember, bot tb.ChatMember, m *tb.Message, k
 		var user *tb.ChatMember
 		var err error
 		if m.IsReply() {
-			user, err = b.ChatMemberOf(m.Chat, m.ReplyTo.OriginalSender)
+			user, err = b.ChatMemberOf(m.Chat, m.ReplyTo.Sender)
 			checkError(err, m)
 		} else if strings.HasPrefix(m.Payload, "@") {
 			username := strings.TrimPrefix(m.Payload, "@")
